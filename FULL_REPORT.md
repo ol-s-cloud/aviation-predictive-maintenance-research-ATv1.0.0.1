@@ -49,13 +49,15 @@ The global aviation MRO market stands at **USD 87-96 billion (2025)** and is pro
 graph TD
     A[Aircraft OEMs<br/>Airbus · Boeing · Embraer] -->|proprietary data + engines| B[OEM Digital Ecosystems<br/>Skywise · Insight Accelerator · IntelligentEngine · GE Maintenance Insight]
     B -->|APIs / data feeds| C[Independent Airline/MRO Platforms<br/>AVIATAR · Prognos · Smart MRO]
-    C -->|integrations| D[ERP/CMMS Suites<br/>AMOS · Ramco · IFS Maintenix · EmpowerMX · CAMP · Veryon]
-    D -->|ops data| E[Specialist PdM / Analytics<br/>ACSIS · Honeywell Forge · Satavia · Uptake]
-    E -->|inspection data| F[Inspection & Robotics<br/>Donecle · Mainblades · Waygate Technologies]
-    E -->|ESG signals| G[Climate & Sustainability<br/>Satavia NETZERO · Atmosfair · Climate X]
+    C -->|integrations| D[ERP/CMMS Suites<br/>AMOS · Ramco · IFS Maintenix · EmpowerMX · CAMP/Veryon]
+    D -->|ops data| E[Specialist Analytics<br/>Honeywell Forge · ACSIS · Uptake]
+    E -->|exposure & prescriptive| X[[**AirTwin**<br/>Environmental Exposure Twin + PdM<br/>Prescriptive Workcards · ROI Tracker]]
+    X -->|ESG signals| G[Climate & Sustainability<br/>Satavia NETZERO · Atmosfair · Climate X]
+    E -->|inspection data| F[Inspection & Robotics<br/>Donecle · Mainblades · Waygate (AI borescope)]
     D -->|delivery & implementation| H[Systems Integrators / Resellers<br/>Accenture · SITA · Capgemini · IBM]
     H --> I[End Users<br/>Airlines · MROs · Lessors · Regulators]
     
+    style X fill:#d1ffd8,stroke:#2e7d32,stroke-width:2px
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style E fill:#e8f5e9
