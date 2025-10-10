@@ -5,6 +5,7 @@
 [![Private](https://img.shields.io/badge/Status-Private-red)](https://github.com/ol-s-cloud/aviation-predictive-maintenance-research)
 [![Updated](https://img.shields.io/badge/Updated-October%202025-blue)]()
 [![Pages](https://img.shields.io/badge/Report-75%20Pages-green)]()
+[![License](https://img.shields.io/badge/License-Proprietary-orange)](./LICENSE.md)
 
 ---
 
@@ -53,6 +54,7 @@ aviation-predictive-maintenance-research/
 │
 ├── README.md                    # This file - Navigation & summary
 ├── FULL_REPORT.md              # Complete 75-page research report
+├── LICENSE.md                   # Copyright & usage terms
 │
 ├── assets/                      # Visual assets
 │   ├── pdm_projection.png      # Predictive maintenance growth chart
@@ -223,4 +225,24 @@ After reviewing this research:
 
 ---
 
+## 📜 Copyright & License
+
+**© 2025 Olar Sa'id. All Rights Reserved.**
+
+This research and all associated materials are proprietary and confidential. See [LICENSE.md](./LICENSE.md) for full copyright notice and usage terms.
+
+**Author & Researcher**: [Olar Sa'id](https://github.com/ol-s-cloud)  
+**Repository**: [aviation-predictive-maintenance-research](https://github.com/ol-s-cloud/aviation-predictive-maintenance-research)
+
+**Citation Format:**
+```
+Olar Sa'id (2025). Aviation Predictive Maintenance & MRO Market Research: 
+Comprehensive Strategic Analysis. Private Research Report. 
+https://github.com/ol-s-cloud/aviation-predictive-maintenance-research
+```
+
+---
+
 *Last Updated: October 10, 2025 | 75 pages | 25,000 words | 50+ tables | 6 diagrams | 50+ sources*
+
+**Research by**: Olar Sa'id | **Status**: Private | **License**: Proprietary
