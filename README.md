@@ -231,7 +231,7 @@ After reviewing this research:
 
 This research and all associated materials are proprietary and confidential. See [LICENSE.md](./LICENSE.md) for full copyright notice and usage terms.
 
-**Author & Researcher**: [Olar Sa'id](https://github.com/ol-s-cloud)  
+**Author & Researcher**: [Olar Sa'id](https://github.com/ol-s-cloud)   - said.olar@outlook.com
 **Repository**: [aviation-predictive-maintenance-research](https://github.com/ol-s-cloud/aviation-predictive-maintenance-research)
 
 **Citation Format:**
