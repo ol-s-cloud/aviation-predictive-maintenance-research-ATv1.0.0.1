@@ -2048,8 +2048,20 @@ With 30% premium: $74.9M
 **Charts**: 2 PNG inserts (to be added)  
 **References**: 50+ cited sources  
 
-**For questions or additional analysis, contact the research team.**
+**For questions or additional analysis, contact the author said.olar@outlook.com.**
 
 ---
+
+---
+**PROPRIETARY AND CONFIDENTIAL**
+
+© 2025 Olar Sa'id. All Rights Reserved.
+
+This document contains proprietary research and strategic analysis. Unauthorized distribution, reproduction, or disclosure is strictly prohibited. See [LICENSE.md](./LICENSE.md) for full terms.
+
+**Author**: Olar Sa'id | [GitHub: @ol-s-cloud](https://github.com/ol-s-cloud)  
+**Date**: October 10, 2025 | **Version**: 1.0 | **Classification**: Private
+
+
 
 **Disclaimer**: This report is for informational and strategic planning purposes only. Market projections, financial scenarios, and competitive analysis are based on publicly available information and reasonable assumptions as of October 2025. Actual results may vary significantly. This document does not constitute investment advice, financial projections, or legal/regulatory guidance. All trademarks and company names are property of their respective owners.
