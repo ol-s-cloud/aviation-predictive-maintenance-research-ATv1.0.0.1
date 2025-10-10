@@ -83,7 +83,10 @@ graph TD
 
 ### 2.2 Market Segments Breakdown (2025)
 
-**📊 INSERT CHART HERE: `market_segments_2025.png`**
+**📊 <p align="center">
+  <img src="./assets/market_segments_2025.png" alt="Market Segments 2025" width="760">
+  <br><em>Figure: Market segments, 2025.</em>
+</p>`**
 *Chart shows: MRO Services ($119B), Digital MRO Software ($1.35B), Predictive Maintenance ($6.0B)*
 
 | Segment | Market Size (2025) | Primary Drivers | Key Players |
