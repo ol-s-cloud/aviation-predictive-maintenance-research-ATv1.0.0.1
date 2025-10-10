@@ -2,7 +2,7 @@
 ## Comprehensive Research Report (2025)
 
 **Prepared:** October 2025  
-**Prepared By:** Olanrewaju Sa'id  
+**Prepared By:** Olanrewaju Sa'id (said.olar@outlook.com)  
 **Research Scope:** Market size, trends, competitive landscape, technology adoption, and financial projections
 
 
