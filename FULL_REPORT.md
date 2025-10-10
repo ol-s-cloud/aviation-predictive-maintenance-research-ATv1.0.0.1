@@ -83,7 +83,11 @@ graph TD
 
 ### 2.2 Market Segments Breakdown (2025)
 
-**[![📊 Market Segments 2025 (thumbnail)](./assets/market_segments_2025_thumb.png)](./assets/market_segments_2025.png)`**
+** <p align="center">
+  <img src="./assets/market_segments_2025.png" alt="Market Segments 2025" width="760">
+  <br><em>Figure: Market segments, 2025.</em>
+</p>
+**
 
 
 *Chart shows: MRO Services ($119B), Digital MRO Software ($1.35B), Predictive Maintenance ($6.0B)*
@@ -101,7 +105,9 @@ graph TD
 
 ### 2.3 Predictive Maintenance Projection (2024-2034)
 
-**📊 INSERT CHART HERE: `pdm_projection.png`**
+![📊 PDM Projection](./assets/pdm_projection.png)
+*Figure: Predictive maintenance projection (2025).*
+
 *Chart shows growth trajectory: 2024 ($5.3B) → 2025 ($6.0B) → 2030 ($10.6B) → 2034 ($18.2B)*
 
 **Key Growth Drivers:**
