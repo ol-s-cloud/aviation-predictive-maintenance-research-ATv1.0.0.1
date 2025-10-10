@@ -1,1 +1,691 @@
+## Airtwin Business Model Canvas
 
+### 16.1 Lean Canvas (One-Page Business Model)
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        AIRTWIN BUSINESS MODEL                         │
+├──────────────────┬──────────────────┬──────────────────┬─────────────┤
+│ PROBLEM          │ SOLUTION         │ UNIQUE VALUE     │ UNFAIR      │
+│                  │                  │ PROPOSITION      │ ADVANTAGE   │
+├──────────────────┤                  ├──────────────────┤             │
+│ 1. Unplanned     │ Environmental    │ "Know exactly    │ • Data moat:│
+│    maintenance   │ exposure tracking│  when your       │   ERA5/CAMS │
+│    costs $47B/yr │ (salt/dust/      │  aircraft needs  │   + flight  │
+│                  │  humidity)       │  attention, not  │   data      │
+│ 2. TAT +150%     │                  │  before, not     │             │
+│    (capacity     │ Risk scoring     │  after"          │ • First-    │
+│    crisis)       │ per tail/route   │                  │   mover in  │
+│                  │                  │ Plugin to        │   exposure  │
+│ 3. Calendar-     │ Prescriptive     │ existing ERP,    │   modeling  │
+│    based wash/   │ maintenance      │ don't switch     │             │
+│    inspect ≠     │ windows          │ tools            │ • Physics + │
+│    risk-based    │                  │                  │   ML =      │
+│                  │ Auto workcards   │ Explainable AI,  │   explain-  │
+│ 4. No environ-   │ in AMOS/Ramco/   │ not black box    │   able      │
+│    mental data   │ AVIATAR          │                  │             │
+│    for planning  │                  │ OEM-neutral,     │ • Academic  │
+│                  │ ROI dashboards   │ works with any   │   validated │
+│                  │                  │ fleet            │             │
+├──────────────────┴──────────────────┴──────────────────┴─────────────┤
+│ KEY METRICS                        │ CHANNELS                         │
+├────────────────────────────────────┼──────────────────────────────────┤
+│ • Customer Acquisition Cost: $50k  │ • Direct sales (aviation execs)  │
+│ • Lifetime Value: $250k+ (5 yrs)   │ • Skywise/AVIATAR marketplace    │
+│ • LTV/CAC Ratio: 5:1 target        │ • MRO network partnerships       │
+│ • Payback Period: 8-12 months      │ • Industry conferences (MRO EU,  │
+│ • Churn: <5% annual target         │   IATA, Aviation Week)           │
+│ • NPS: >50 target                  │ • LinkedIn + aviation forums     │
+│ • Model Accuracy: >80% threshold   │ • Academic publications          │
+│ • Time to Value: 3-6 months        │ • Pilot program → reference      │
+├────────────────────────────────────┴──────────────────────────────────┤
+│ COST STRUCTURE                     │ REVENUE STREAMS                  │
+├────────────────────────────────────┼──────────────────────────────────┤
+│ FIXED:                             │ PRIMARY:                         │
+│ • Engineering team: $400-600k/yr   │ • SaaS subscription: $300-700    │
+│ • Cloud infrastructure: $50-100k   │   per aircraft per month         │
+│ • Data licenses (ERA5/CAMS): $20k  │                                  │
+│ • Sales/marketing: $200-300k       │ SECONDARY:                       │
+│                                    │ • Integration services: $50-150k │
+│ VARIABLE:                          │   per airline (one-time)         │
+│ • Customer success: $50k per major │                                  │
+│ • Integration delivery: $30k/customer│ • Premium support: +20-30%     │
+│                                    │   on subscription                │
+│ TOTAL Year 1: $800k-1.2M          │                                  │
+│                                    │ OPTIONAL:                        │
+│ Break-even: ~150-200 aircraft      │ • Success fee: 10-15% of proven  │
+│             or 3-4 mid-size airlines│   savings (alternative model)   │
+│                                    │ • White-label to MROs: revenue   │
+│                                    │   share 30-40%                   │
+└────────────────────────────────────┴──────────────────────────────────┘
+```
+
+---
+
+### 16.2 Full Business Model Canvas (Detailed)
+
+#### **1. Customer Segments**
+
+**Primary:**
+- **Mid-size airlines** (50-150 narrowbody aircraft)
+  - Coastal route exposure (Mediterranean, Caribbean, North Sea, Southeast Asia)
+  - Dust/desert exposure (Middle East, North Africa, Australia inland)
+  - Using AMOS, Ramco, or AVIATAR (integration ease)
+  
+**Secondary:**
+- **MRO service providers** (value-add to airline customers)
+- **Lessors** (asset health monitoring for portfolio management)
+
+**Tertiary (Future):**
+- **Major network carriers** (Year 2-3, after proof)
+- **Insurers** (underwriting data for risk assessment)
+
+---
+
+#### **2. Value Propositions**
+
+**Core Promise:**
+> "Reduce unplanned maintenance costs by 15-25% through environmental exposure-based predictive maintenance—without changing your existing workflows."
+
+**Specific Value Drivers:**
+
+| **Stakeholder** | **Job to be Done** | **Pain Relieved** | **Gain Created** |
+|----------------|-------------------|------------------|------------------|
+| **Maintenance Planner** | Optimize wash/inspect schedules | Calendar-based = wasteful OR risky | Risk-based scheduling, explainable |
+| **Tech Ops Manager** | Minimize AOG events | Surprises ground aircraft | Early warnings, predictability |
+| **Finance Director** | Control costs | Budget overruns from unplanned work | Measurable savings (IATA categories) |
+| **Reliability Engineer** | Improve fleet health | Lack of environmental data | Exposure visibility, root cause |
+| **Sustainability Lead** | ESG reporting | No environmental impact data | Contrail + exposure quantification |
+
+**Differentiation vs. Competitors:**
+- ✅ **vs. Skywise/AVIATAR**: Specialized environmental focus they don't have
+- ✅ **vs. RR/GE**: OEM-neutral, works across all engines
+- ✅ **vs. Satavia**: Maintenance ROI focus, not just climate
+- ✅ **vs. ACSIS/Forge**: Environmental exposure angle unique
+- ✅ **vs. Generic PdM**: Aviation-specific, proven datasets (ERA5/CAMS)
+
+---
+
+#### **3. Channels**
+
+**Customer Acquisition:**
+
+| **Channel** | **Stage** | **Cost** | **Conversion** | **Priority** |
+|------------|----------|---------|---------------|-------------|
+| **LinkedIn outreach** | Awareness | Low | 2-3% | ⭐⭐⭐ Phase 1 |
+| **Industry conferences** | Consideration | Medium | 5-8% | ⭐⭐⭐⭐ Phase 1 |
+| **Academic publications** | Trust | Low | Indirect | ⭐⭐⭐ Phase 1 |
+| **Pilot programs** | Decision | High | 50-70% | ⭐⭐⭐⭐⭐ Phase 1 |
+| **Skywise Marketplace** | Discovery | Medium | 1-2% | ⭐⭐⭐⭐ Phase 2 |
+| **AVIATAR Ecosystem** | Discovery | Medium | 3-5% | ⭐⭐⭐⭐ Phase 2 |
+| **MRO partnerships** | Referral | Low | 10-15% | ⭐⭐⭐⭐ Phase 2 |
+| **Customer referrals** | Advocacy | Zero | 30-40% | ⭐⭐⭐⭐⭐ Phase 2-3 |
+
+**Distribution Strategy:**
+- **Year 1**: Direct sales + pilot programs (build proof)
+- **Year 2**: Add platform partnerships (scale distribution)
+- **Year 3**: Channel partners + network effects (accelerate growth)
+
+---
+
+#### **4. Customer Relationships**
+
+**Relationship Type by Segment:**
+
+**Airlines (Primary):**
+- **Pre-sale**: Educational (webinars, whitepapers, ROI calculators)
+- **Sale**: Consultative (pilot design, custom ROI analysis)
+- **Onboarding**: Dedicated success (integration support, training)
+- **Ongoing**: Automated + human (dashboard + quarterly reviews)
+- **Expansion**: Account management (fleet-wide upsell)
+
+**MROs (Channel):**
+- **Partnership**: Co-marketing, revenue share agreements
+- **Enablement**: White-label option, co-branded materials
+- **Support**: Partner portal, API documentation
+
+**Retention Strategy:**
+- ✅ Quarterly Business Reviews (QBRs) with ROI tracking
+- ✅ Continuous model improvement (feedback loop)
+- ✅ Feature roadmap transparency
+- ✅ Customer advisory board (co-create product)
+- ✅ Annual user conference (community building)
+
+---
+
+#### **5. Revenue Streams**
+
+**Primary Model: Subscription SaaS**
+
+| **Tier** | **Price/Aircraft/Month** | **Includes** | **Target Customer** |
+|----------|------------------------|-------------|-------------------|
+| **Starter** | $300-400 | Exposure scoring, basic alerts, AMOS integration | 20-50 aircraft airlines |
+| **Professional** | $500-600 | + Prescriptive workcards, premium support, ROI dashboard | 50-150 aircraft airlines |
+| **Enterprise** | $700-800 | + Multi-ERP, API access, custom models, dedicated CSM | 150+ aircraft, MROs |
+
+**Annual Contract Value (ACV) Examples:**
+- 60 aircraft @ $500/mo = **$360k ACV**
+- 120 aircraft @ $600/mo = **$864k ACV**
+- 200 aircraft @ $700/mo = **$1.68M ACV**
+
+**Secondary Revenue:**
+- **Integration Services**: $50-150k one-time (per customer)
+- **Premium Support**: +20-30% on subscription (24/7, faster response)
+- **Custom Development**: $50-200k (bespoke features)
+
+**Alternative Models (Consider for Early Customers):**
+- **Success-Based Pricing**: 10-15% of proven savings (de-risks for customer)
+- **Pilot Program**: $50-75k fixed fee for 6-12 months (validation)
+- **Freemium**: Free for 1-2 aircraft, upgrade to fleet (land-and-expand)
+
+---
+
+#### **6. Key Resources**
+
+**Intellectual Property:**
+- ✅ **Exposure model algorithms** (proprietary)
+- ✅ **Dataset integration layer** (ERA5 + CAMS + OpenSky)
+- ✅ **Risk scoring methodology** (validated with Cambridge/Cranfield)
+- ✅ **ERP connectors** (AMOS, Ramco, AVIATAR APIs)
+
+**Human Resources:**
+- **Founding Team (Minimum Viable)**:
+  - CTO / Lead Engineer (aerospace + ML)
+  - Aviation Domain Expert (ex-airline maintenance VP)
+  - Sales Lead (aviation industry connections)
+  - Customer Success Manager (Year 1, Month 6+)
+
+- **Advisory Board**:
+  - Prof. Ajith Parlikad (Cambridge IfM) - Academic credibility
+  - Airline Maintenance VP (active) - Customer insights
+  - MRO Executive (retired) - Industry validation
+  - Aviation VC/Investor - Strategic guidance
+
+**Financial Resources:**
+- **Seed Capital**: $500k-1M (18-24 month runway)
+  - Covers: Engineering, sales, pilot programs, cloud infrastructure
+  - Sources: Aviation VCs, angel investors, strategic (OEM/MRO)
+
+**Data & Technology:**
+- ERA5 reanalysis data (ECMWF)
+- CAMS aerosol data (Copernicus)
+- OpenSky flight operations
+- Cloud infrastructure (AWS/GCP/Azure)
+- ML/AI platforms (TensorFlow, PyTorch, or similar)
+
+---
+
+#### **7. Key Activities**
+
+**Product Development (40% effort Year 1):**
+- Build exposure model (physics-based + ML)
+- AMOS/Ramco/AVIATAR integrations
+- Dashboard & reporting tools
+- API development (for platform partners)
+
+**Validation & Proof (30% effort Year 1):**
+- Academic partnership (Cambridge/Cranfield)
+- Pilot programs with 2-3 airlines
+- Model accuracy testing (>80% target)
+- Case study publication
+
+**Sales & Marketing (20% effort Year 1):**
+- Airline outreach (easyJet, Wizz, LATAM, Emirates)
+- Conference presence (MRO Europe, IATA)
+- Thought leadership (articles, webinars)
+- Partnership development (AVIATAR/Skywise)
+
+**Customer Success (10% effort Year 1, grows to 30% Year 2):**
+- Integration support
+- Training & onboarding
+- QBRs and ROI tracking
+- Feedback collection
+
+---
+
+#### **8. Key Partnerships**
+
+**Strategic Partnerships (Critical):**
+
+| **Partner Type** | **Examples** | **Value Exchange** | **Priority** |
+|-----------------|-------------|-------------------|-------------|
+| **ERP/CMMS Vendors** | Swiss-AS (AMOS), Ramco, IFS | Integration access ↔ Mutual customers | ⭐⭐⭐⭐⭐ |
+| **Platform Ecosystems** | Airbus Skywise, LHT AVIATAR | Marketplace listing ↔ Revenue share | ⭐⭐⭐⭐⭐ |
+| **Academic Institutions** | Cambridge IfM, Cranfield DARTeC | Validation ↔ Research collaboration | ⭐⭐⭐⭐ |
+| **MRO Networks** | LHT, ST Engineering, AAR | Customer access ↔ Value-add service | ⭐⭐⭐⭐ |
+| **Data Providers** | ECMWF, Copernicus, Met Office | Data access ↔ Use case validation | ⭐⭐⭐ |
+
+**Channel Partners (Scale):**
+- Systems integrators (Accenture, SITA, Capgemini)
+- Aviation consultants (Oliver Wyman, McKinsey)
+- Industry associations (IATA, MRO associations)
+
+---
+
+#### **9. Cost Structure**
+
+**Fixed Costs (Annual):**
+
+| **Category** | **Year 1** | **Year 2** | **Year 3** |
+|-------------|-----------|-----------|-----------|
+| **Salaries & Benefits** | $400-600k | $800k-1.2M | $1.5-2M |
+| **Cloud Infrastructure** | $50-100k | $100-150k | $150-250k |
+| **Data Licenses** | $20-30k | $30-50k | $50-80k |
+| **Office & Admin** | $50-80k | $80-120k | $120-180k |
+| **Marketing** | $100-150k | $200-300k | $300-500k |
+| **Legal & Compliance** | $50-100k | $80-120k | $100-150k |
+| **TOTAL FIXED** | **$670k-1.06M** | **$1.29-1.94M** | **$2.22-3.16M** |
+
+**Variable Costs:**
+- Customer acquisition: $30-50k per customer
+- Integration delivery: $20-40k per customer
+- Customer success: $30-50k per major account annually
+
+**Burn Rate Year 1**: $55-90k/month (pre-revenue)  
+**Break-even**: ~150-200 aircraft under management OR 3-4 mid-size airlines
+
+---
+
+### 16.3 Strategic Recommendations for Airtwin
+
+Based on comprehensive market analysis, here are prioritized recommendations:
+
+#### **Immediate Actions (Next 3 Months)**
+
+**1. SECURE ANCHOR CUSTOMER (Priority #1)**
+- ✅ **Target**: easyJet OR Wizz Air
+- ✅ **Approach**: LinkedIn → warm intro → pilot proposal
+- ✅ **Offer**: 6-month pilot, 20-50 aircraft, $50-75k, success-based expansion
+- ✅ **Success metric**: LOI signed within 3 months
+
+**2. ACADEMIC VALIDATION PARTNERSHIP**
+- ✅ **Target**: Cambridge IfM (Prof. Ajith Parlikad)
+- ✅ **Proposal**: Joint research project, co-authored paper
+- ✅ **Timeline**: 6-12 months validation study
+- ✅ **Outcome**: Peer-reviewed publication, credibility
+
+**3. BUILD MVP (Minimum Viable Product)**
+- ✅ **Scope**: Exposure model + risk scoring + basic AMOS integration
+- ✅ **Technology**: Python/cloud-native, ERA5/CAMS data pipeline
+- ✅ **Timeline**: 3-4 months development
+- ✅ **Team**: 2-3 engineers (1 aerospace, 1 ML, 1 full-stack)
+
+---
+
+#### **Phase 1 Focus (Months 4-12)**
+
+**4. EXECUTE PILOT PROGRAMS**
+- ✅ Run 2 concurrent pilots (easyJet/Wizz + LATAM/flydubai)
+- ✅ Collect 6 months exposure data
+- ✅ Demonstrate 10-15% cost reduction
+- ✅ Publish case study
+
+**5. DEVELOP PLATFORM RELATIONSHIPS**
+- ✅ AVIATAR ecosystem entry (via LHT connection)
+- ✅ Skywise marketplace exploration (if Airbus customers engaged)
+- ✅ Position as "best-of-breed" plugin, not competitor
+
+**6. BUILD GO-TO-MARKET ENGINE**
+- ✅ Hire Sales Lead with aviation network
+- ✅ Conference presence (MRO Europe, IATA events)
+- ✅ Thought leadership (LinkedIn, industry publications)
+- ✅ ROI calculator tool (lead generation)
+
+---
+
+#### **Phase 2 Focus (Year 2)**
+
+**7. SCALE CUSTOMER BASE**
+- ✅ Target: 10-12 airlines by end Year 2
+- ✅ Regional clustering (Europe → Middle East → APAC → Americas)
+- ✅ Reference selling (leverage easyJet/Wizz case studies)
+
+**8. CHANNEL PARTNERSHIPS**
+- ✅ MRO network deals (LHT, ST Engineering, AAR)
+- ✅ White-label options for MRO brands
+- ✅ Revenue share models (30-40% to MRO)
+
+**9. PRODUCT EXPANSION**
+- ✅ Multi-ERP support (add IFS Maintenix, EmpowerMX)
+- ✅ ESG reporting module (contrail + exposure)
+- ✅ Mobile app for maintenance planners
+- ✅ API for third-party integrations
+
+---
+
+#### **Strategic Pivots to Consider**
+
+**If Direct Sales Struggles:**
+- 🔄 **Pivot to MRO channel** (white-label to LHT/ST Eng)
+- 🔄 **Pivot to platform play** (sell to Airbus/LHT as feature)
+- 🔄 **Pivot to data licensing** (exposure data as service)
+
+**If Model Accuracy Issues:**
+- 🔄 **Narrow scope** (focus only on coastal salt exposure initially)
+- 🔄 **Partner with sensor company** (add hardware component)
+- 🔄 **Pivot to inspection optimization** (not predictive, but prescriptive)
+
+**If Funding Challenges:**
+- 🔄 **Bootstrap with pilot revenue** (charge higher pilot fees)
+- 🔄 **Grant funding** (EU Horizon, Clean Sky, national innovation)
+- 🔄 **Strategic investor** (OEM or MRO with aligned interests)
+
+---
+
+## 17. Research Validation Framework
+
+### 17.1 Respondent Groups (Customer Discovery Interviews)
+
+To validate business model assumptions, conduct structured interviews with these groups:
+
+#### **Group 1: Airline Maintenance Decision-Makers** (Priority)
+
+**Target Roles:**
+- VP Engineering / VP Technical Operations
+- Director of Maintenance Planning
+- Fleet Reliability Manager
+- Manager of Maintenance Programs
+
+**Sample Size:** 15-20 interviews
+- 8-10 from target Tier 1-A airlines (easyJet, Wizz, LATAM, Emirates, etc.)
+- 5-7 from Tier 1-B airlines
+- 2-3 from major carriers (aspirational insights)
+
+**Interview Objectives:**
+1. Validate pain points (unplanned maintenance, TAT pressure, cost)
+2. Understand current maintenance scheduling approach
+3. Assess willingness to adopt environmental exposure-based PdM
+4. Identify budget availability and procurement process
+5. Determine integration requirements (ERP/CMMS systems)
+6. Gauge pricing sensitivity and ROI expectations
+
+---
+
+#### **Group 2: MRO Service Providers** (Channel Validation)
+
+**Target Roles:**
+- VP Commercial / Business Development
+- Head of Digital Services / Innovation
+- Engineering Director
+
+**Sample Size:** 8-12 interviews
+- 4-5 independent MROs (LHT, ST Eng, AAR, Haeco)
+- 3-4 airline-owned MROs (AFI KLM E&M, Delta TechOps)
+- 1-2 OEM service arms (GE, P&W affiliates)
+
+**Interview Objectives:**
+1. Validate channel partnership appetite
+2. Understand value-add service positioning
+3. Assess white-label vs. co-branded preferences
+4. Determine revenue share expectations
+5. Identify integration with existing service offerings
+6. Gauge competitive dynamics (OEM tensions)
+
+---
+
+#### **Group 3: ERP/CMMS Vendors** (Integration Partners)
+
+**Target Roles:**
+- Head of Partnerships / Alliances
+- Product Management (aviation vertical)
+- Solution Architects
+
+**Sample Size:** 5-8 interviews
+- Swiss-AS (AMOS) - CRITICAL
+- Ramco Systems - HIGH PRIORITY
+- IFS (Maintenix)
+- EmpowerMX
+- 1-2 others
+
+**Interview Objectives:**
+1. Understand API access and partnership models
+2. Assess integration complexity and timeline
+3. Determine certification/validation requirements
+4. Identify mutual customer opportunities
+5. Explore co-marketing possibilities
+6. Gauge competitive concerns
+
+---
+
+#### **Group 4: Platform Ecosystem Leaders** (Distribution Partners)
+
+**Target Roles:**
+- Ecosystem / Marketplace Manager
+- Head of Digital Services
+- Partnership Lead
+
+**Sample Size:** 3-5 interviews
+- Airbus (Skywise)
+- Lufthansa Technik (AVIATAR)
+- Potentially: Boeing, GE (exploratory)
+
+**Interview Objectives:**
+1. Validate marketplace opportunity
+2. Understand certification process and timeline
+3. Assess revenue share and economics
+4. Determine marketing/distribution support
+5. Identify existing apps in similar space (competition)
+6. Gauge openness to "best-of-breed" plugins
+
+---
+
+#### **Group 5: Academic & Research** (Validation Partners)
+
+**Target Institutions:**
+- Cambridge Institute for Manufacturing (IfM)
+- Cranfield DARTeC & IVHM Centre
+- Other European aviation research centers
+
+**Sample Size:** 3-5 discussions
+
+**Interview Objectives:**
+1. Validate methodology and approach
+2. Explore research collaboration opportunities
+3. Assess co-publication potential
+4. Determine PhD student project possibilities
+5. Identify funding opportunities (grants)
+
+---
+
+### 17.2 Interview Question Bank by Respondent Group
+
+#### **Airline Maintenance Decision-Makers Questions**
+
+**Section A: Pain Points & Current State (15 mins)**
+
+1. **Unplanned Maintenance Burden:**
+   - "What percentage of your maintenance events are unplanned? How does this impact operations?"
+   - "Can you estimate the annual cost of unplanned maintenance for your fleet?"
+   - "What are the top 3 causes of unplanned maintenance in your experience?"
+
+2. **Environmental Factors:**
+   - "Do you currently track environmental exposure (salt, dust, humidity) for your aircraft?"
+   - "How do you decide when to wash aircraft? Calendar-based or condition-based?"
+   - "Have you experienced corrosion or environmental damage that surprised you? Tell me about it."
+
+3. **Current Tools & Process:**
+   - "What ERP/CMMS system do you use? (AMOS, Ramco, IFS, other?)"
+   - "Do you use any predictive maintenance tools today? Which ones? Satisfaction level?"
+   - "Walk me through how you schedule a C-check or heavy maintenance visit."
+
+4. **Capacity & TAT Pressure:**
+   - "How has engine shop TAT changed over the past 3 years?"
+   - "Do you have aircraft grounded waiting for maintenance slots? How many?"
+   - "What's your average AOG (Aircraft on Ground) hours per aircraft per year?"
+
+**Section B: Solution Validation (15 mins)**
+
+5. **Concept Reaction:**
+   - *[Show concept: Environmental exposure tracking → risk score → prescriptive wash/inspect windows]*
+   - "On a scale of 1-10, how valuable would this be to your operation? Why that score?"
+   - "What concerns or objections come to mind?"
+
+6. **Feature Prioritization:**
+   - "Rank these features by importance: [exposure tracking, prescriptive alerts, ROI dashboard, ERP integration, ESG reporting]"
+   - "What features are missing from this list that you'd expect?"
+
+7. **Integration & Adoption:**
+   - "How long does it typically take to integrate a new tool into your ERP system?"
+   - "Who needs to approve a tool like this? What's the procurement process?"
+   - "What would prevent you from adopting this even if ROI was proven?"
+
+**Section C: Economics & Decision Criteria (10 mins)**
+
+8. **Pricing & Budget:**
+   - "What would you expect to pay per aircraft per month for this? (Don't tell them price yet)"
+   - "Would you prefer subscription or success-based pricing (% of savings)?"
+   - "What ROI payback period is required for approval? (6 months? 12 months? 24 months?)"
+
+9. **Proof Requirements:**
+   - "What would you need to see to run a pilot program? (Model accuracy? Academic validation?)"
+   - "How long of a pilot would you need to make a go/no-go decision?"
+   - "If pilot is successful, how quickly could you expand to full fleet?"
+
+10. **Competitive Landscape:**
+    - "Are you aware of other solutions addressing environmental exposure? (Satavia?)"
+    - "Would you prefer an independent tool or an add-on from Airbus/Boeing/your OEM?"
+
+**Section D: Close & Next Steps (5 mins)**
+
+11. **Interest Level:**
+    - "If we could demonstrate 15% cost reduction in a 6-month pilot with 20-50 aircraft, would you be interested?"
+    - "What would need to be true for you to say yes to a pilot?"
+    - "Who else in your organization should I speak with?"
+
+12. **Referrals:**
+    - "Which other airlines do you think would be interested in this?"
+    - "Can you introduce me to [specific contact]?"
+
+---
+
+#### **MRO Service Provider Questions**
+
+**Section A: Business Model & Services (10 mins)**
+
+1. "What percentage of your revenue comes from predictive maintenance or digital services?"
+2. "How do you differentiate your MRO services from competitors?"
+3. "Do you offer any environmental-related services (corrosion prevention, wash programs)?"
+4. "What digital tools do you provide to airline customers?"
+
+**Section B: Partnership Opportunity (15 mins)**
+
+5. *[Present concept]*
+   - "Would this be valuable as an add-on service for your airline customers?"
+   - "Would you prefer white-label (your brand) or co-branded?"
+
+6. "What revenue share would make sense for you? (30%? 40%? 50%?)"
+7. "How do you typically partner with technology vendors? (Reseller? Referral? Integration?)"
+8. "What concerns would you have about offering this service?"
+
+**Section C: Customer Insights (10 mins)**
+
+9. "Which of your airline customers are most concerned about unplanned maintenance?"
+10. "Have any customers asked for environmental exposure tracking?"
+11. "Would you be willing to facilitate introductions to 2-3 airline customers for pilots?"
+
+**Section D: Competitive Dynamics (10 mins)**
+
+12. "Do Airbus Skywise or Boeing services compete with your offerings? How do you coexist?"
+13. "Would offering an independent environmental PdM tool strengthen your position?"
+14. "What would make you say YES to partnership?"
+
+---
+
+#### **ERP/CMMS Vendor Questions**
+
+**Section A: Partnership Model (15 mins)**
+
+1. "What's your process for partnering with third-party analytics providers?"
+2. "Do you have an app marketplace or partner ecosystem?"
+3. "What technical requirements exist for API access? (Security, certification, etc.)"
+4. "What's typical timeline from partnership discussions to live integration?"
+
+**Section B: Technical Integration (15 mins)**
+
+5. "Walk me through your API capabilities for maintenance planning modules."
+6. "Can third-party tools auto-generate workcards in your system?"
+7. "What data can we access? (Flight data? Maintenance history? Parts inventory?)"
+8. "What data can we write back? (Alerts? Recommendations? Workcards?)"
+
+**Section C: Commercial Terms (10 mins)**
+
+9. "Do you charge for API access? If so, what's the model?"
+10. "Do you expect revenue share on customers acquired through integration?"
+11. "Can we co-market to your customer base?"
+
+**Section D: Competitive & Strategic (5 mins)**
+
+12. "Are you building environmental exposure tracking internally?"
+13. "Do you see independent PdM tools as partners or competitors?"
+14. "Which airline customers would be most receptive to this?"
+
+---
+
+#### **Platform Ecosystem Questions (Airbus/AVIATAR)**
+
+**Section A: Marketplace Dynamics (10 mins)**
+
+1. "How many apps are currently in [Skywise Marketplace / AVIATAR ecosystem]?"
+2. "What categories perform best? (PdM? Operations? Finance?)"
+3. "What's the average time-to-market for a new app?"
+
+**Section B: Certification & Requirements (15 mins)**
+
+4. "Walk me through the certification process for new apps."
+5. "What technical, security, and compliance requirements exist?"
+6. "What testing/validation is required before launch?"
+7. "Do you require exclusivity or can we be on multiple platforms?"
+
+**Section C: Economics & Support (10 mins)**
+
+8. "What's the revenue share model? (30/70? 20/80?)"
+9. "Do you provide marketing support for certified apps?"
+10. "How do customers discover apps in the marketplace?"
+11. "What's average customer acquisition cost through marketplace?"
+
+**Section D: Strategic Fit (10 mins)**
+
+12. "Is environmental exposure tracking a gap in current app offerings?"
+13. "Are you building this internally or open to best-of-breed partners?"
+14. "What would make our app a 'must-have' vs. 'nice-to-have'?"
+15. "Can you facilitate introductions to 1-2 mutual customers for validation?"
+
+---
+
+### 17.3 Research Objectives & Success Criteria
+
+#### **Primary Research Goals:**
+
+| **Question** | **Success Criterion** | **Data Source** |
+|-------------|----------------------|-----------------|
+| **Is the pain real?** | 70%+ say unplanned maintenance is top-3 problem | Airline Group 1 |
+| **Is our solution compelling?** | 60%+ rate value 7+/10 | Airline Group 1 |
+| **Will they pay?** | 50%+ willing to pilot at $50-75k | Airline Group 1 |
+| **Can we integrate easily?** | AMOS/Ramco confirm API access in <6 months | ERP Group 3 |
+| **Is channel viable?** | 2+ MROs express partnership interest | MRO Group 2 |
+| **Platform opportunity?** | AVIATAR or Skywise interested in discussions | Platform Group 4 |
+| **Academic credibility?** | Cambridge/Cranfield willing to collaborate | Academic Group 5 |
+
+#### **GO/NO-GO Decision Thresholds:**
+
+**STRONG GO (Proceed with Confidence):**
+- ✅ 5+ airlines express pilot interest (>7/10 value rating)
+- ✅ 2+ airlines commit to pilot LOIs
+- ✅ 1+ ERP partner confirms integration path
+- ✅ Academic validation partner secured
+- ✅ 1+ MRO or platform partnership discussions active
+
+**CAUTIOUS GO (Proceed with Adjustments):**
+- ✅ 3-4 airlines express interest but need proof first
+- ✅ Integration more complex than expected but feasible
+- ✅ Pricing needs adjustment (lower or success-based)
+- ✅ Pivot to MRO channel vs. direct needed
+
+**NO-GO (Pivot or Abandon):**
+- ❌ <3 airlines see value (not a real pain point)
+- ❌ Integration impossible or >12 months
+- ❌ No one willing to pilot even at low/no cost
+- ❌ OEMs already building similar features (timing risk)
+- ❌ No academic partner willing to validate
+
+---
