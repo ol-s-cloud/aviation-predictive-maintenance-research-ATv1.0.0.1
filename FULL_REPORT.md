@@ -956,7 +956,7 @@ flowchart TD
 #### Pricing Assumptions
 
 **Per-Tail Subscription Model:**
-- **Entry/Conservative**: $200-400/aircraft/month
+- **Entry/Conservative**: $200-400/aircraft/month  --- To confirm with industry experts current cost per aircraft
 - **Standard/Base**: $400-600/aircraft/month
 - **Premium/Aggressive**: $600-800/aircraft/month
 
