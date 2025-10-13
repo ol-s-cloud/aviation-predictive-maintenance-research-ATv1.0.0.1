@@ -216,6 +216,16 @@
 
 *[Your answer here]*
 
+---
+
+### OE4 — Technology Adoption Priorities
+*Type: Long answer (50–120 words)*
+
+**Question:** What matters most to you when adopting a new predictive maintenance technology? (e.g., accuracy, confidence in prediction results, mode of integration, cost reduction, etc.). Briefly describe and share your experience in your own words.
+
+*[Your answer here]*
+
+
 
 ---
 
