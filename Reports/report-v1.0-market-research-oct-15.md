@@ -58,23 +58,35 @@ The global aircraft Maintenance, Repair, and Overhaul (MRO) market presents sign
 - **Aircraft Engine MRO:** •	The global aircraft engine MRO market size was valued at USD 37.56 billion in 2022 and is projected to grow from USD 42.81 billion in 2023 to USD 59.01 billion by 2030, exhibiting a CAGR of 4.69% during the forecast period .
 - **Engine & Component Services:** •	Engine services and component services each contribute about 30% within whole MRO market .
 
+![AirCraft MRO Market](../assets/mro.png)
 
+![TRL Framework](../assets/trl1.png)
 
 **Key Takeaways:**
-1. Growing fleet size drives increased maintenance demand
-2. Rising passenger and cargo demand requires more frequent and comprehensive maintenance services
+1. More aircraft means more maintenance needs.
+2. As passenger and cargo demand increases, airlines will require more frequent and comprehensive maintenance services for their fleets
 
 ### Predictive Maintenance Market
 
 The predictive maintenance segment shows particularly strong growth:
 
-- **Aviation Predictive Maintenance:** USD 5.3 billion (2024) → USD 10.6 billion (2030), CAGR ~13.1%
-- **Global Predictive Maintenance (all industries):** USD 10.93 billion (2024) → USD 70.73 billion (2034)
+•	Digital technologies are revolutionizing aircraft MRO processes. The integration of advanced data analytics, artificial intelligence (AI), and machine learning is enabling predictive maintenance, which can reduce downtime and enhance operational efficiency
+•	It is the fastest-growing MRO sub-segment, predictive airplane maintenance market valued at USD 5.3 billion in 2024, growing to USD 10.6 billion by 2030, ~13.1 % CAGR .
+•	The global predictive maintenance market (across industries) was valued at USD 10.93 billion in 2024, projected to grow significantly (to ~USD 70.73 billion) by 2034 .
+
 
 **Key Takeaways:**
-1. Predictive tools are recognized growth drivers in MRO
-2. System stress indicates opportunity for efficient predictive systems like AirTwin
-3. Strong macro momentum supports investment appetite
+1) Shows that predictive tools are considered a growth driver in MRO.
+2) Indicates stress in the system — an opportunity for efficient predictive systems like AirTwin.
+3) Confirms macro momentum in predictive maintenance, which supports investment appetite.
+
+![Predictive Maintenance](../assets/Predictive.png)
+
+
+![Predictive Maintenance](../assets/mro-mc.png)
+
+![Predictive Maintenance](../assets/mro-2-c.png)
+
 
 ### Key Market Trends
 
@@ -125,21 +137,87 @@ The predictive maintenance segment shows particularly strong growth:
 - Clear gap that existing competitors do not emphasize
 
 ---
+## 3. Detailed Comparison Matrix
+
+### 3.1 Market Tiers & Players
+
+| **Tier** | **Representative Companies** | **Core Offering** | **Revenue Model** | **Maturity** | **Fleet Adoption** | **End-User Impact** |
+|----------|----------------------------|-------------------|-------------------|--------------|-------------------|-------------------|
+| **OEM Ecosystems** | Airbus Skywise, Boeing Insight Accelerator, RR IntelligentEngine, GE Maintenance Insight | Proprietary digital twins, predictive performance management | Subscription / bundled services | High | ~60% of fleets | High uptime, closed data |
+| **Independent Platforms** | Lufthansa AVIATAR, AFI KLM Prognos, ST Eng Smart MRO | OEM-neutral predictive fleet management | SaaS / add-on modules | Medium-High | ~35% | Lower AOG, better scheduling |
+| **ERP/CMMS** | AMOS, Ramco Aviation, IFS Maintenix, EmpowerMX, CAMP/Veryon | Work orders, inventory, compliance, planning | Per-aircraft license | High | ~80% | Compliance, cost control |
+| **PdM Analytics** | CrossConsense ACSIS, Honeywell Forge, Satavia DECISIONX, Uptake | AI fault prediction, exposure analytics, contrail management | SaaS subscription | Emerging | 20-30% | Downtime ↓ 15-25% |
+| **Inspection/Robotics** | Donecle, Mainblades, Waygate Technologies | Drone visual inspection, AI borescope, defect detection | Hardware + SaaS | Early | <10% | TAT ↓ 40%, labor ↓ 25% |
+| **Cross-Industry EAM** | IBM Maximo, SAP PAI, Oracle IoT, Siemens MindSphere | Generic PdM for industrial assets | Enterprise license | Mature | Airports/OEMs | Asset uptime |
+| **Climate/ESG** | Satavia NETZERO, Atmosfair, Climate X | Contrail avoidance, ESG analytics, carbon credits | SaaS / credit trading | Nascent | <5% | ESG compliance |
+
+---
+
+
+### 3.2 Detailed Company Profiles
+
+| **Company / Platform** | **Class** | **What They Offer** | **Scale / Clients** | **Integrations** | **Not Their Focus** | **Sources** |
+|----------------------|-----------|-------------------|-------------------|------------------|-------------------|-------------|
+| **Airbus Skywise** | OEM ecosystem | Data lake, reliability & predictive-maintenance apps, marketplace | ~11,600 connected aircraft (late 2024); 12k+ Airbus supported | Skywise APIs; Digital Alliance (Delta TechOps, GE, Liebherr) | Environmental exposure/corrosion modeling | Airbus newsroom, Aviation Week |
+| **Boeing Insight Accelerator** | OEM ecosystem | Flight-data analytics, pattern detection, reliability alerts | Boeing fleet customers | Boeing Global Services stack | Open ecosystem emphasis | Boeing Services documentation |
+| **GE Maintenance Insight** | OEM ecosystem | Early fault detection, trends, engine diagnostics | GE-powered fleets; 44k+ engines monitored | GE SaaS + services | Neutral multi-OEM airframe modeling | Reuters, GE Aviation |
+| **Rolls-Royce IntelligentEngine** | OEM ecosystem | AI borescope inspection, cloud upload, digital twin | RR-powered fleets; 13k+ engines | Waygate hardware, IFS Maintenix | Airframe-wide PdM, environmental overlays | Rolls-Royce investor reports |
+| **Lufthansa Technik AVIATAR** | Independent platform | Condition monitoring, predictive health, reliability workflow | >40 customers, 5,000+ aircraft; LATAM 300+ | Google Cloud-based, rich integrations | Contrail/climate analytics not core | LHT financials, customer announcements |
+| **AFI KLM E&M Prognos** | Independent platform | Predictive analytics for components/systems | Airline/MRO customers | OEM/MRO data connectors | Environmental exposure focus | AFI KLM press releases |
+| **ST Engineering Smart MRO** | Independent platform | Planning, analytics, smart hangar | Global MRO customers | ST Eng operations stack | Deep PdM across all systems | ST Engineering reports |
+| **Swiss-AS AMOS** | ERP/CMMS | Tech records, compliance, inventory, planning | Large global installed base | Many connectors; LHT-owned | Advanced AI PdM emerging | Swiss-AS documentation |
+| **Ramco Aviation Suite** | ERP/CMMS | MRO, supply chain, maintenance modules | Airlines/MROs; strong APAC presence | ERP + integrations | Specialized PdM depth | Ramco Systems FY reports |
+| **IFS Maintenix** | ERP/CMMS | Maintenance execution, data exchange | Used by RR for engine data sharing | Enterprise suite + APIs | ESG/contrail analytics | IFS case studies |
+| **EmpowerMX** | ERP/operations | Line/base MRO execution, scheduling, AI planning | Airlines + DoD programs | API integrations | Domain-deep PdM models | EmpowerMX announcements |
+| **CAMP Systems / Veryon** | ERP/CMMS (biz-av) | Health tracking, MTX, EHM | 33k+ engines in EHM; biz-av strength | Integrations in business aviation | Airline-scale PdM scope | CAMP/Veryon materials |
+| **CrossConsense ACSIS** | Specialist PdM | Real-time alerts, tech history, troubleshooting | Airline adopters; LHT ecosystem partner | Interfaces with AMOS/others | Environmental exposure/ESG | CrossConsense vendor materials |
+| **Honeywell Forge** | Specialist PdM | Performance management, fuel & maintenance analytics | Major carriers | Honeywell ecosystem | Environmental exposure twin | Honeywell Aerospace |
+| **Satavia DECISIONX:NETZERO** | Sustainability | Contrail avoidance, atmospheric intelligence, GS concept-approved | Multi-airline trials | APIs to flight planning | Core PdM (maintenance ROI focus) | Gold Standard, Satavia announcements |
+| **Donecle / Mainblades / Waygate** | Inspection/robotics | Drone visual inspection, borescope, AI defect detection | 20+ airlines, OEM programs | Data feeds to PdM/ERP | Predictive modeling | Vendor documentation |
+
+---
+
+### 3.3 Capability Matrix vs. Market Needs
+
+| **Capability** | Skywise | Insight Accel. | RR Intelligent | GE Maint. | AVIATAR | AMOS/Ramco/IFS | ACSIS | Forge | Satavia | Drones | **AirTwin** | **Market Need** |
+|----------------|---------|---------------|----------------|-----------|---------|----------------|-------|-------|---------|--------|-------------|----------------|
+| **Health Monitoring (systems)** | ✔️ | ✔️ | ✔️ (engine) | ✔️ (engine) | ✔️ | ⚪ | ✔️ | ✔️ | ⚪ | ⚪ | ✔️ | **HIGH** |
+| **Predictive Maintenance (AI/ML)** | ✔️ (black-box) | ✔️ | ✔️ (engine) | ✔️ (engine) | ✔️ | ⚪ | ✔️ | ✔️ | ⚪ | ❌ | ✔️ | **CRITICAL** |
+| **Environmental Exposure Twin** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ⚪ (contrails) | ❌ | **✔️ (UNIQUE)** | **EMERGING** |
+| **Prescriptive Workcards** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ❌ | ❌ | **✔️** | **MEDIUM** |
+| **Physics-Based Digital Twin** | ⚪ | ⚪ | ✔️ (engine) | ✔️ (engine) | ⚪ | ❌ | ⚪ | ✔️ | ❌ | ❌ | **✔️** | **HIGH** |
+| **Material Degradation Modeling** | ❌ | ❌ | ⚪ (engine) | ⚪ (engine) | ❌ | ❌ | ❌ | ⚪ | ❌ | ❌ | **✔️** | **MEDIUM** |
+| **Confidence Interval Predictions** | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ⚪ | ❌ | **✔️** | **MEDIUM** |
+| **Open Ecosystem / Neutral** | ⚪ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ✔️ | ⚪ | ✔️ | ✔️ | **✔️** | **HIGH** |
+| **ESG / Contrail Overlay** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ | ⚪ | **GROWING** |
+| **Fleet-Wide Analytics** | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ⚪ | ⚪ | ❌ | ⚪ | **HIGH** |
+| **Tail-Specific Tracking** | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ | ⚪ | ❌ | **✔️** | **CRITICAL** |
+| **Explainable AI / Physics Hybrid** | ❌ | ❌ | ⚪ | ⚪ | ❌ | ❌ | ❌ | ⚪ | ❌ | ❌ | **✔️ (UNIQUE)** | **EMERGING** |
+| **MRO Integration** | ✔️ | ⚪ | ⚪ | ⚪ | ✔️ | ✔️ | ✔️ | ⚪ | ❌ | ❌ | ⚪ | **HIGH** |
+
+**Legend:**
+- ✔️ = Core capability with strong market presence
+- ⚪ = Partial capability or not emphasized publicly
+- ❌ = Not a focus area based on public documentation
+
+**Gap Analysis**: Environmental exposure modeling (salt/particulate/humidity) and prescriptive maintenance workcards represent underserved market segments with high growth potential.
+
+**AirTwin differentiation** uses environmental exposure modelling (chemicals, particulates, volcanic ash) and provides confidence-interval-based predictions — a clear gap none of the above emphasise
+
 
 ## 5. Business Model Comparison: Satavia vs. AirTwin
 
-| Element | Satavia (Current) | AirTwin (Hypothesis) |
-|---------|-------------------|----------------------|
-| **Customer Segments** | Airlines (Etihad multi-year commercial contract) | Airlines (fleet maintenance & operations), Engine OEMs (e.g., Rolls-Royce), Independent MRO providers, Aircraft lessors & insurers |
-| **Value Proposition** | Route optimization to reduce contrails; 2,200+ tonnes CO₂e avoided in 10-month trial (65 flights, 12 airlines); minimal fuel impact | Reduces unplanned downtime and maintenance costs; confidence-driven predictive analytics; quantifies chemical & particulate exposure for safety and sustainability |
-| **Channels** | Enterprise software via Microsoft AppSource | Direct SaaS subscription; integration via OEM/MRO platforms; partner distribution through aviation software vendors |
-| **Customer Relationships** | Multi-year commercial production agreement with ongoing operational support | Pilot projects and co-development; dedicated technical support & analytics dashboard; data-sharing agreements |
-| **Revenue Streams** | Enterprise software/service fees (pricing not disclosed); potential future climate credit revenues (Gold Standard CMOUs) | Subscription model (per engine/flight hour); consulting and model calibration services; OEM licensing or white-label integration fees |
-| **Key Resources** | Atmospheric modeling on Microsoft Azure cloud infrastructure | Data science & atmospheric modeling team; environmental datasets (ECMWF, satellite); cloud computing & digital twin infrastructure; aviation domain expertise |
-| **Key Activities** | Forecasting contrail-forming conditions; pre-flight route optimization; reporting avoided climate impact; methodology development | Data collection, model calibration, and validation; software platform development; customer onboarding and pilots |
-| **Key Partnerships** | Market infrastructure for credit trading; atmospheric forecasting collaboration; public-sector co-funding | Airlines & OEMs for data access; environmental data providers; regulatory bodies for compliance |
-| **Cost Structure** | Minimal fuel impact on airlines (<0.4% increase); internal costs not disclosed | Cloud computing and data licensing; model development and maintenance; business development and pilot projects |
-
+| Block | Satavia | AirTwin (Hypothesis) |
+|-------|---------|----------------------|
+| 1. Customer Segments | Paying customers include airlines; Etihad Airways signed a multi-year commercial production contract to use contrail management in routine operations. [Etihad Global)] | • Airlines (fleet maintenance & operations teams)<br>• Engine OEMs (e.g. Rolls-Royce)<br>• Independent MRO providers<br>• Aircraft lessors & insurers (asset/risk management) |
+| 2. Value Proposition | Route optimisation to reduce formation of persistent warming contrails and quantified avoided climate impact measured as carbon dioxide equivalent. A ten-month programme on sixty-five flights operated by twelve airlines reported more than 2,200 tonnes of carbon dioxide equivalent avoided in total and more than forty tonnes per flight on average, with minimal impact on fuel consumption or flight distance. - Airlines participating in the trials included Icelandair, Kenya Airways, Condor, and SunExpress. [(GreenAir News)] | • Reduces unplanned downtime and maintenance costs.<br>• Provides confidence-driven predictive analytics (unique vs competitors).<br>• Quantifies chemical & particulate exposure to improve safety and sustainability. |
+| 3. Channels | Enterprise software distribution and discoverability via Microsoft AppSource listing for SATAVIA's DECISIONX offering - Microsoft (AppSource listing).<br> (Appsource – Business Apps) | • Direct SaaS platform subscription.<br>• Integration via OEM or MRO digital platforms.<br>• Partner distribution through aviation software vendors. |
+| 4. Customer Relationships | Ongoing operational use through a multi-year commercial production agreement, indicating day-to-day support and service beyond pilots - Etihad Airways | • Pilot projects and co-development with early adopters.<br>• Dedicated technical support & analytics dashboard.<br>• Data-sharing agreements with enterprise partners. |
+| 5. Revenue Streams | Current: Enterprise software and service fees associated with routine contrail management operations (pricing not publicly disclosed) - Etihad Airways contract confirms paid commercial deployment. [(Etihad Global)]<br><br>Prospective: Potential future revenues linked to climate crediting: Gold Standard approved the contrail methodology concept and ran a public consultation on a proposed methodology to issue Certified Mitigation Outcome Units for contrail prevention. This is contingent on final methodology and issuance. [(GreenAir News)] | • Subscription model (per engine / per flight hour).<br>• Consulting and model calibration services.<br>• OEM licensing or white-label integration fees. |
+| 6. Key Resources | Atmospheric modelling and the DECISIONX platform operate on cloud infrastructure; Microsoft reported SATAVIA modelling the Earth's atmosphere on Microsoft Azure. (Microsoft UK Stories) | • Data science & atmospheric modelling team.<br>• Environmental datasets (e.g., ECMWF, satellite data).<br>• Cloud computing & digital twin infrastructure.<br>• Aviation domain expertise & partnerships. |
+| 7. Key Activities | Forecasting contrail-forming atmospheric conditions and pre-flight route optimisation; reporting of avoided climate impact from operational trials; methodology development with Gold Standard. (GreenAir News) | • Data collection, model calibration, and validation.<br>• Software platform development.<br>• Customer onboarding, pilots, and result demonstration. |
+| 8. Key Partnerships | Market infrastructure partnership to enable trading of credits arising from non-carbon-dioxide impacts; collaboration on atmospheric forecasting for contrail flight tests; public-sector co-funding of airline trials. [(acx.net)] | • Airlines & OEMs for data access and validation.<br>• Environmental data providers.<br>• Regulatory bodies for compliance alignment. |
+| 9. Cost Structure | Trial reporting states "minimal impact" on fuel consumption and distances when implementing contrail management; any additional fuel is borne by airlines. SATAVIA's own cost breakdown is not publicly itemised. [(GreenAir News)] | • Cloud computing and data licensing fees.<br>• Model development and maintenance costs.<br>• Business development and pilot projects. |
 ---
 
 ## 6. Customer Research Framework
@@ -164,7 +242,7 @@ The predictive maintenance segment shows particularly strong growth:
 | **Aircraft Lessors** | Concerned about residual value, component life, and asset performance | Asset Manager, Technical Services Lead |
 | **Insurers/Regulators** | Influence industry standards and incentives for risk reduction | Risk Analyst, Aviation Safety Officer |
 
-**Target:** 10-15 total responses, prioritizing Airlines and MROs for early validation
+**Target:** 10-15 total responses, prioritizing Airlines and MROs for early validation for early validation (as they are easier to access and highly relevant).
 
 ---
 
@@ -283,17 +361,24 @@ The questionnaire is designed to validate critical business model assumptions an
 
 1. Lavin, A., et al. (2022). Technology readiness levels for machine learning systems. *Nature Communications*, 13(1), 6039.
 2. NASA Technology Readiness Levels: https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/
-3. Grand View Research (2024). Aircraft MRO Market Size Report.
-4. Market Research Future (2025). US Aircraft Maintenance, Repair and Overhaul Market Report.
-5. Fortune Business Insights (2023). Aircraft Engine MRO Market Report.
-6. Future Market Insights. Commercial Aircraft MRO Market Analysis.
-7. Strategic Market Research. Aircraft MRO Market Report.
-8. GM Insights. Predictive Airplane Maintenance Market Report.
-9. Fortune Business Insights (2024). Predictive Maintenance Market Report.
-10. McKinsey & Company. Aircraft MRO 2.0: The Digital Revolution.
-11. Satavia DECISIONX Platform: https://www.aerospacecarbonsolutions.com/contrail-management
-12. Rolls-Royce Intelligent Engine: https://www.rolls-royce.com/media/our-stories/discover/2019/how-digital-twin-technology-can-enhance-aviation.aspx
-13. Airbus Skywise Platform: https://papers.phmsociety.org/index.php/phmap/article/view/3722
+3.   Grand View Research (2024). Aircraft MRO Market Size Report. https://www.grandviewresearch.com/industry-analysis/aircraft-mro-market
+4.   Market Research Future (2025). US Aircraft Maintenance, Repair and Overhaul Market Report - https://www.marketresearchfuture.com/reports/us-aircraft-maintenance-repair-and-overhaul-market-21422
+5.   Fortune Business Insights (2023). Aircraft Engine MRO Market Report - https://www.fortunebusinessinsights.com/aircraft-engine-mro-market-108858
+6.   Future Market Insights. Commercial Aircraft MRO Market Analysis. - https://www.futuremarketinsights.com/reports/commercial-aircraft-mro-market
+
+7.  Strategic Market Research. Aircraft MRO Market Report - https://www.strategicmarketresearch.com/market-report/aircraft-mro-market
+8.   GM Insights. Predictive Airplane Maintenance Market Report - https://www.gminsights.com/industry-analysis/predictive-airplane-maintenance-market
+9.  Fortune Business Insights (2024). Predictive Maintenance Market Report - https://www.fortunebusinessinsights.com/predictive-maintenance-market-102104
+10. https://www.mckinsey.com/industries/travel/our-insights/aircraft-mro-2-point-0-the-digital-revolution
+11. https://www.aerospacecarbonsolutions.com/contrail-management
+12. https://www.rolls-royce.com/media/our-stories/discover/2019/how-digital-twin-technology-can-enhance-aviation.aspx
+13. https://papers.phmsociety.org/index.php/phmap/article/view/3722
+
+
+14. McKinsey & Company. Aircraft MRO 2.0: The Digital Revolution.
+15. Satavia DECISIONX Platform: https://www.aerospacecarbonsolutions.com/contrail-management
+16. Rolls-Royce Intelligent Engine: https://www.rolls-royce.com/media/our-stories/discover/2019/how-digital-twin-technology-can-enhance-aviation.aspx
+17. Airbus Skywise Platform: https://papers.phmsociety.org/index.php/phmap/article/view/3722
 
 ---
 
