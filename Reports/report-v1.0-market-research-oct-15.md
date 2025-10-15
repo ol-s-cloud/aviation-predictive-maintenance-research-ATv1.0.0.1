@@ -60,7 +60,7 @@ The global aircraft Maintenance, Repair, and Overhaul (MRO) market presents sign
 
 ![AirCraft MRO Market](../assets/mro.png)
 
-![TRL Framework](../assets/trl1.png)
+![TRL Framework](../assets/coms.png)
 
 **Key Takeaways:**
 1. More aircraft means more maintenance needs.
