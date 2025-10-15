@@ -26,17 +26,24 @@
 
 To assess the maturity level of the technology, it is essential to consider the Machine Learning Technology Readiness Level (ML-TRL). The framework developed by Lavin et al. (2022)  provides a structured approach for evaluating ML-TRL, offering valuable insights into the readiness level of the AirTwins Project. This is important because traditional TRLs, discussed by NASA  , do not consider the challenges involved in incorporating ML for predictions. AirTwins Project considers dynamic data to make predictions for improved maintenance scheduling.
 
+![TRL Framework](../assets/trl1.png)
+Figure 1: MLTRL spans research (red) through prototyping (orange), productization (yellow), and deployment (green).
+
+
+
 #### Current Assessment Summary
+
+Table 1: TRL summary assessment of AirTwin Project
 
 | Aspect | Assessment |
 |--------|------------|
-| **Traditional TRL** | TRL 6 — Demonstrated in relevant environment |
+| **Traditional TRL** | NASA/ Aerospace Engineering (Technology Lifecyle) TRL 6 — Demonstrated in relevant environment |
 | **ML-TRL Equivalent** | Level 6 — Application development |
 | **Maturity Summary** | Prototype validated with real-world data; requires integration, QA, and compliance work for deployment |
-| **Next ML-TRL Goal** | Level 7 — Systems integration with customer operations and maintenance systems for live testing; compliance with aviation standards; continuous data pipeline monitoring |
-| **Next Steps** | Business model development, market strategy, IP strategy, integration with maintenance systems, regulatory assessment, data governance, continuous monitoring pipeline |
+| **Next ML-TRL Goal** | Level 7 – Systems integration (integration into production and validation pipelines with customer (eg: airlines) operations and maintenance systems for live testing. Further entering in compliance with aviation standards with continuous data pipeline monitoring and feedback mechanisms |
+| **Next Steps** | Business model (Market strategy) and IP strategy; Integration with maintenance systems, Regulatory and compliance assessment, Data governance and continuous monitoring pipeline, |
 
-**Key Finding:** The AirTwin project is at ML-TRL Level 6 (application development), transitioning from validated prototype to deployable system. To reach higher readiness levels (7-8), the project must focus on integration testing and operational deployment, which requires a commercial feasibility report to understand customer requirements.
+**Key Finding:** The AirTwin project is at MLTRL Level 6, meaning it is in application development, transitioning from a validated prototype to a deployable system. To reach higher readiness, it must focus on integration testing and operational deployment - core criteria for Levels 7–8 in the MLTRL framework. In order to integrate, the project requires a commercial feasibility report to understand the customer requirements to tune and integrate accordingly.
 
 ---
 
@@ -46,10 +53,12 @@ To assess the maturity level of the technology, it is essential to consider the 
 
 The global aircraft Maintenance, Repair, and Overhaul (MRO) market presents significant opportunity:
 
-- **Global MRO Market:** USD 90.85 billion (2024) → USD 120.96 billion (2030), CAGR 4.75%
-- **U.S. MRO Market:** USD 10.82 billion (2025) → USD 16.79 billion (2034)
-- **Aircraft Engine MRO:** USD 37.56 billion (2022) → USD 59.01 billion (2030), CAGR 4.69%
-- **Engine & Component Services:** Each contribute approximately 30% of total MRO market
+- **Global MRO Market:** •	The global aircraft MRO market size was estimated at USD 90.85 billion in 2024 and is projected to reach USD 120.96 billion by 2030, growing at a CAGR of 4.75% from 2025 to 2030 .  
+- **U.S. MRO Market:** •	In the U.S. specifically, the MRO market is projected to grow from USD 10.82 billion in 2025 to USD 16.79 billion by 2034 . 
+- **Aircraft Engine MRO:** •	The global aircraft engine MRO market size was valued at USD 37.56 billion in 2022 and is projected to grow from USD 42.81 billion in 2023 to USD 59.01 billion by 2030, exhibiting a CAGR of 4.69% during the forecast period .
+- **Engine & Component Services:** •	Engine services and component services each contribute about 30% within whole MRO market .
+
+
 
 **Key Takeaways:**
 1. Growing fleet size drives increased maintenance demand
