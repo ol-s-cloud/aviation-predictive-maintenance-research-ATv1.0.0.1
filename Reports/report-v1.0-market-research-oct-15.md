@@ -267,7 +267,23 @@ The questionnaire is designed to validate critical business model assumptions an
 | **Anchor Partnerships** | Critical partners and incentives unspecified | Required partners and value exchange | Partner map, roles and responsibilities, commitment letters |
 | **Differentiation vs. Incumbent Tools** | Overlap with existing tools untested | Unique gap closed versus current platforms | Comparative capability matrix, buyer confirmations of unmet need |
 
-### Core Question Themes
+
+| Theme | What to validate | Evidence to collect | Question to Formulate |
+|-------|------------------|---------------------|----------------------|
+| Primary paying customer | Identify the single buyer role that signs and funds a pilot. | Buyer role, budget owner, procurement path, timeline to contract. | ? |
+| Single operational use case | Select one exposure problem tied to a daily maintenance decision. | Written problem statement, decision trigger, success condition from sponsor. | ? |
+| Data access and lawful basis | Fields, ownership, access path, retention, and lawful basis for processing. | Data inventory, governance approvals, draft data-sharing agreement. | ? |
+| Workflow integration | Where AirTwin lives (system of record) and required interfaces. | Target systems list, interface specifications, named technical owner. | ? |
+| Accuracy and confidence thresholds | Minimum detection rate, maximum false alerts, minimum lead time. | Metric definitions, validation protocol, historical benchmark results. | ? |
+| Economic value and payback | Unit economics per customer type using real inputs. | Event rates, hours-on-ground cost, parts costs, calculated savings model. | ? |
+| Pricing model and corridor | Preferred pricing model and acceptable price corridor. | Model preference data, indicative ranges, letters or emails of intent. | ? |
+| Pilot design and success metrics | Standard pilot scope, duration, aircraft count, datasets, outcome metrics. | Pilot charter, timeline, metric targets, stakeholder sign-offs. | ? |
+| Anchor partnerships | Required partners and value exchange. | Partner map, roles and responsibilities, commitment letter or email. | ? |
+| Differentiation versus incumbent tools | Unique gap closed versus current platforms and portals. | Comparative capability matrix, buyer confirmations of unmet need. | ? |
+
+
+
+### Draft Questions From Questionaire v1
 
 #### A. Current Maintenance Practice
 - How frequently does your organization perform scheduled engine maintenance?
@@ -303,9 +319,32 @@ The questionnaire is designed to validate critical business model assumptions an
 
 ---
 
-## 8. Next Steps
+## Optional (Demographics / Background)
+- Organisation name and size (fleet size / employee count).
+- Region of operation.
+- Job title / role (optional if confidentiality needed).
 
-### Immediate Priorities
+## 3. Deliverable Summary
+- Selection criteria: 5 customer groups prioritised by relevance.
+- Questionnaire length: ~15–18 questions (10–12 core + 3–5 optional).
+- Output: One-page questionnaire plan + digital version (Google Form / Microsoft Forms).
+
+- 
+
+## 8. Airtwin Priority Matrix
+
+![Pririty Matrix](../assets/prioritym.png)
+
+·        Dashed quadrant lines → visually represent the priority levels of different customer groups.
+·        Bubble size → indicates the potential market value.
+·        Early targets → Airlines and Lessors should be prioritised for initial engagement.
+·        Strategic partnerships → required with Engine OEMs to enable integration and data access.
+·        Secondary market → Independent MROs represent a mid-term opportunity once value is proven.
+Long-term potential → Insurers and Regulators may drive adoption later through compliance and risk-management incentives
+
+
+
+### Notes
 1. Complete questionnaire v2.0 refinement with supervisor
 2. Identify and compile target respondent list (10-15 contacts)
 3. Address GDPR considerations and set up data capture (Hubspot CRM)
@@ -316,44 +355,47 @@ The questionnaire is designed to validate critical business model assumptions an
 1. Conduct customer validation interviews
 2. Refine business model based on feedback
 3. Develop detailed pilot program charter
-4. Establish anchor partnerships with key OEMs or airlines
+4. Discuss on potential partnerships with key OEMs or airlines
 5. Quantify unit economics with real customer data
 
-### Long-Term Objectives
-1. Achieve ML-TRL Level 7 (systems integration)
-2. Secure first commercial pilot deployment
-3. Develop regulatory compliance pathway
-4. Build continuous data pipeline and monitoring infrastructure
-5. Scale customer base across target segments
 
 ---
 
 ## Appendix A: ML-TRL Level Details
 
-| ML-TRL Level | Description | AirTwin Status | Justification |
-|--------------|-------------|----------------|---------------|
-| **TRL 0** | Basic principles observed | ✓ Completed | NCAS atmospheric modeling established theoretical underpinnings |
-| **TRL 1** | Goal-oriented research concept | ✓ Completed | AirTwin concept formulated for aircraft engine exposure and maintenance forecasting |
-| **TRL 2** | Proof of principle | ✓ Completed | Digital twin validated on simulated atmospheric data and regional weather models |
-| **TRL 3** | Experimental proof of concept | ✓ Completed | Demonstrated predictive modeling using flight and atmospheric data |
-| **TRL 4** | Prototype validated in lab | ✓ Completed | Working digital twin pipeline established in research environment (University of Cambridge/NCAS) |
-| **TRL 5** | Technology validated in relevant environment | ✓ Completed | Validated using actual research flight and atmospheric data |
-| **TRL 6** | Application development | **→ Current Stage** | Technology demonstrated on research aircraft; not yet deployed commercially. Further development needed for scalability, compliance, and customer integration |
-| **TRL 7** | System prototype in operational environment | ○ Not Yet Achieved | No integration with commercial airline platforms or predictive maintenance systems |
-| **TRL 8** | System completed and qualified | ○ Not Yet Achieved | Needs compliance validation, continuous data pipeline, and operational governance |
-| **TRL 9** | System proven through successful operations | ○ Not Yet Achieved | No production deployment or operational monitoring yet |
+| ML-TRL Levels | Description (Adapted from MLTRL and NASA Framework) | AirTwin Assessment | Justification |
+|---------------|-----------------------------------------------------|-------------------|---------------|
+| TRL 0 – Basic Principles Observed | Fundamental scientific principles explored; theoretical models or hypotheses proposed; no experimental validation yet. | Completed | The NCAS atmospheric modelling established theoretical underpinnings for aircraft digital twins using chemical transport models and atmospheric simulations. |
+| TRL 1 – Goal-Oriented Research Concept Formulated | Research goals defined; potential application areas identified; feasibility analysis performed. | Completed | AirTwin concept formulated to apply digital twin modelling to aircraft engine exposure and maintenance forecasting. Application to commercial aviation defined. |
+| TRL 2 – Proof of Principle | Early-stage R&D using simulated data or testbeds; model behaviour studied in controlled settings. | Completed | Digital twin validated on simulated atmospheric data and regional weather models. |
+| TRL 3 – Experimental Proof of Concept | Experimental validation of algorithm or ML model on representative datasets; preliminary prototype established. | Completed | Demonstrated predictive modelling using flight and atmospheric data showing capability to estimate exposure to atmospheric compounds. |
+| TRL 4 – Prototype Validated in Laboratory Environment | Prototype system integrated and tested in controlled lab or research environment; performance metrics obtained. | Completed | Working digital twin pipeline established in research environment (University of Cambridge / NCAS). Demonstrated functionality with real but non-commercial data. |
+| TRL 5 – ML Technology Validated in Relevant Environment | ML components verified with real-world or semi-operational data; integration with relevant systems begins. | Completed | Validated using actual researcg flight and atmospheric data; capable of estimating real-world engine exposure. Represents transition from research to application. |
+| TRL 6 – Application Development: Technology Demonstrated in Relevant Environment | Application-level system demonstrated in relevant operational environment; focus on robustness, compliance, and usability. | Current Stage | Explicitly listed as TRL 6 in project documentation. Technology demonstrated successfully on research aircraft; not yet deployed to commercial operators. Further development needed for scalability, compliance, and integration with customer maintenance systems. |
+| TRL 7 – Integrations: System Prototype Demonstration in Operational Environment | Full system integration with existing operational infrastructure; end-to-end testing in realistic conditions. | Not Yet Achieved | No integration yet with commercial airline digital platforms or predictive maintenance systems (e.g., Boeing AHM, Rolls-Royce Engine Health Monitoring). |
+| TRL 8 – Mission Ready: System Completed and Qualified | System fully qualified and tested under expected operational conditions; documentation, governance, and reliability verified. | Not Yet Achieved | Needs compliance validation, continuous data pipeline, and operational governance mechanisms before qualification. |
+| TRL 9 – Deployment: Actual System Proven Through Successful Mission Operations | Technology deployed in production; monitored for drift, reliability, and user feedback; maintenance and updates operationalized. | Not Yet Achieved | No production deployment or operational monitoring yet. Next steps include field testing, CI/CD pipelines, and user feedback integration. |
+
 
 ---
 
 ## Appendix B: Satavia Revenue Structure Evidence
 
-| Item | Description | Revenue/Cost | Evidence Source | URL | Notes |
-|------|-------------|--------------|-----------------|-----|-------|
-| **B2B Software (DECISIONX:NETZERO)** | Airlines use platform for contrail avoidance | Recurring commercial fees | Etihad multi-year commercial agreement | [Link](https://www.etihad.com/en-us/news/etihad-and-satavia-sign-multi-year-commercial-agreement) | Confirms paid, day-to-day deployment |
-| **Credit-Linked Revenues (CMOUs)** | Monetizing avoided warming via Gold Standard | Potential revenue share | Gold Standard consultation on contrail prevention | [Link](https://www.goldstandard.org/consultations/contrail-prevention) | Explains CO₂e conversion and CMOUs |
-| **Trading Enablement** | Partnership with AirCarbon Exchange | Indirect monetization | SATAVIA-ACX partnership announcement | [Link](https://acx.net/media-release/satavia-partners-with-aircarbon-exchange) | Enables CMOU transactions |
-| **Grants & Funding** | ESA/UKSA support for trials | Grant/contract income | ESA Business Applications news | [Link](https://business.esa.int/news/uk-based-startup-develops-new-technology) | Non-recurring R&D support |
-| **Customer Value: Avoided Warming** | Quantified climate benefit | >40 tCO₂e avoided per flight | Trial results from 12 airlines | [Link](https://www.greenairnews.com/?p=5578) | >2,200 tCO₂e total; minimal ops impact |
+| Revenue Structure for The Satavia Business Model |
+|--------------------------------------------------|
+
+| Item | What it is | How money is made / cost incurred | Evidence (title) | URL | Notes / status |
+|------|-----------|-----------------------------------|-----------------|-----|---------------|
+| B2B software & services (DECISIONX:NETZERO) | Airlines use SATAVIA to plan/operate flights to avoid warming contrails | Recurring commercial fees (license/SaaS or managed-service) tied to routine ops | Etihad and SATAVIA sign multi-year commercial agreement | https://www.etihad.com/en-us/news/etihad-and-satavia-sign-multi-year-commercial-agreement-to-deliver-contrail-management-and-future-carbon-credits-within-day-to-day-operations | Confirms paid, day-to-day deployment; multiple trade outlets reported the same |
+| B2B software & services (DECISIONX:NETZERO) – coverage | Trade press coverage of the Etihad multi-year contract | As above | Etihad Airways signs multi-year commercial production contract | https://aviationweek.com/aerospace/emerging-technologies/etihad-airways-signs-multi-year-commercial-production-contract | Confirms 'world's first' multi-year commercial production contract |
+| Credit-linked revenues (CMOUs) | Monetising avoided warming via Gold Standard's contrails methodology | Potential revenue share / performance-based fees when airlines generate & transact CMOUs | Gold Standard consultation: Contrail prevention to reduce aviation's non-CO2 climate impacts | https://www.goldstandard.org/consultations/contrail-prevention-to-reduce-aviations-non-co2-climate-impacts | Explains CO2e conversion and CMOUs (not GS-VERs) |
+| Credit-linked revenues (CMOUs) – concept approval | GS approval of SATAVIA methodology concept | Enables issuance pathway once methodology is finalised | Gold Standard approves aircraft contrails methodology concept | https://www.goldstandard.org/news/gold-standard-approves-aircraft-contrails-methodology-concept | Concept approval dated Aug 7, 2023 |
+| Trading enablement (market rails) | Partnership with AirCarbon Exchange (ACX) to support first trades | Indirect monetisation via platform/referral economics; enables CMOU transactions | SATAVIA partners with AirCarbon Exchange | https://acx.net/media-release/satavia-partners-with-aircarbon-exchange-in-plan-to-conduct-worlds-first-carbon-trade-arising-from-aviations-non-co2-impacts/ | Also reported by PR Newswire and GreenAir News |
+| Trading enablement (market rails) – coverage | Press coverage of ACX partnership | As above | SATAVIA and ACX partner on first-ever carbon trade to arise from non-CO₂ contrail impacts | https://www.greenairnews.com/?p=2939 | Trade publication summary |
+| Grants & project funding (non-recurring) | ESA/UKSA support for trials and scaling | Grant/contract income defrays R&D and demonstration costs | UK-based startup develops new technology to reduce aviation's climate impact | https://business.esa.int/news/uk-based-startup-develops-new-technology-to-reduce-aviations-climate-impact | ESA Business Applications news; also see May 15, 2023 EIN Presswire |
+| Customer cost signal: fuel-burn delta | Small additional fuel to route around Ice-Supersaturated Regions (ISSRs) | Cost to airline: <0.4% fuel-burn increase on medium-haul (trial data) | SATAVIA reports successful contrail management trials with aircraft operators | https://www.einpresswire.com/article/701971248/satavia-reports-successful-contrail-management-trials-with-aircraft-operators-supported-by-uk-european-space-agencies | Trial press release with quantified fuel delta |
+| Customer value signal: avoided warming | Quantified climate benefit (CO2e) per optimised flight | Value to airline: >40 tCO2e avoided warming per flight (potentially monetisable) | SATAVIA reports results from 10-month contrail management trial involving 12 airlines | https://www.greenairnews.com/?p=5578 | >2,200 tCO2e total; >40 tCO2e/flight average; minimal ops impact |
+| Pricing transparency | Public list price | None publicly disclosed | Microsoft AppSource – SATAVIA DECISIONX overview | https://appsource.microsoft.com/en-us/product/saas/satavia.satavia-decision-intelligence?tab=overview | Product capability page without pricing |Retry
 
 ---
 
@@ -383,5 +425,5 @@ The questionnaire is designed to validate critical business model assumptions an
 ---
 
 *Document Version: Draft for Review*  
-*Last Updated: October 2025*  
+*Last Updated: 15 October 2025*  
 *Status: Awaiting supervisor feedback and questionnaire v2.0 finalization*
