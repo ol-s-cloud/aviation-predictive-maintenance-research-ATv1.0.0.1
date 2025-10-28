@@ -1,3 +1,9 @@
+markdown
+
+## AirTwin IP Protection Architecture
+
+```mermaid
+
 graph TB
     A["🎯 AirTwin Core Innovation<br/>━━━━━━━━━━━━━━━━━━<br/>Environmental Digital Twin +<br/>RUL impact +<br/>uncertainty range +<br/>sustainability and carbon offset impact"] 
     
@@ -44,3 +50,5 @@ graph TB
     style I fill:#607D8B,stroke:#37474F,color:#fff,stroke-width:2px
     style J fill:#8BC34A,stroke:#558B2F,color:#fff,stroke-width:2px
     style K fill:#9E9E9E,stroke:#424242,color:#fff,stroke-width:2px
+
+```
