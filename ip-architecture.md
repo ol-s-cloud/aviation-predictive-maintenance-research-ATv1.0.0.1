@@ -1,4 +1,7 @@
-markdown## AirTwin IP Protection Architecture
+markdown
+
+## AirTwin IP Protection Architecture
+
 ```mermaid
 
 graph TB
