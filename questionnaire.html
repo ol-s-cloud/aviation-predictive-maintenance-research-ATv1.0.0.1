@@ -1,110 +1,1019 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AirTwin Survey</title>
-<style>
-  /* Base styles and hero section omitted for brevity */
-  body{font-family:sans-serif;background:#f8f9fa;color:#333;margin:0;padding:0;}
-  .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#0d47a1;color:white;text-align:center;padding:0 20px;}
-  .hero h1{font-size:48px;margin-bottom:20px;}
-  .hero p{font-size:20px;margin-bottom:30px;}
-  .btn-start{background:#ffc107;color:#0d47a1;border:none;padding:15px 30px;font-size:18px;cursor:pointer;border-radius:8px;}
-  .btn-start:hover{background:#ffb300;}
-  .form-container{max-width:700px;margin:50px auto;padding:20px;background:white;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
-  .progress-bar{width:100%;background:#e0e0e0;height:10px;border-radius:5px;overflow:hidden;margin-bottom:30px;}
-  .progress-fill{width:0%;height:100%;background:#0d47a1;transition:width 0.3s ease;}
-  .question{margin-bottom:25px;}
-  .question h3{font-size:20px;margin-bottom:10px;}
-  .options{display:flex;flex-direction:column;gap:10px;}
-  .option{display:flex;align-items:center;padding:10px 15px;border:1px solid #ccc;border-radius:8px;cursor:pointer;transition:0.2s;}
-  .option:hover{background:#f1f1f1;}
-  .option input{margin-right:10px;}
-  .btn-submit,.btn-reset{background:#0d47a1;color:white;border:none;padding:12px 25px;font-size:16px;cursor:pointer;border-radius:8px;margin-right:10px;}
-  .btn-submit:hover,.btn-reset:hover{background:#073c7a;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirTwin — Aviation Intelligence Research</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 50%, #ffffff 100%);
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+        /* ===== HEADER ===== */
+        .header {
+            padding: 24px 80px;
+            backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            background: rgba(255,255,255,0.7);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #000 0%, #2a2a2a 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: white;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .brand-info h1 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-info p {
+            font-size: 10px;
+            color: #999;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .progress-bar {
+            width: 120px;
+            height: 4px;
+            background: #eee;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #000 0%, #2a2a2a 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 120px 80px 80px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%);
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-display {
+            width: 254px;
+            height: 127px;
+            margin: 0 auto 40px;
+            background: linear-gradient(135deg, #fff 0%, #f9f9fb 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-display::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(0,0,0,0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .logo-display img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #000 0%, #2a2a2a 100%);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+            transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        /* ===== MAIN FORM CONTAINER ===== */
+        .form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 80px 100px;
+            width: 100%;
+        }
+
+        /* ===== PREMIUM CARDS ===== */
+        .card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,248,250,0.9) 100%);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 28px;
+            padding: 60px;
+            margin-bottom: 40px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.9);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at -30% -30%, rgba(0,0,0,0.02) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .card:hover {
+            border-color: rgba(0,0,0,0.12);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+        }
+
+        .card-header {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 40px;
+        }
+
+        .card-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-header p {
+            font-size: 14px;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .card-divider {
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, #000 0%, transparent 100%);
+            margin-top: 16px;
+            border-radius: 2px;
+        }
+
+        /* ===== FORM FIELDS ===== */
+        .field-group {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 28px;
+        }
+
+        .label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 10px;
+        }
+
+        .required { color: #ff3b30; }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%);
+            border: 1.5px solid rgba(0,0,0,0.1);
+            border-radius: 12px;
+            font-family: 'Inter', inherit;
+            font-size: 15px;
+            color: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder {
+            color: #bbb;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.02);
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .form-grid.full {
+            grid-template-columns: 1fr;
+        }
+
+        /* ===== QUESTIONS ===== */
+        .question {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 36px;
+        }
+
+        .question-text {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #1a1a1a;
+        }
+
+        .question-number {
+            color: #000;
+            font-weight: 900;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 18px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.005) 100%);
+            border: 1.5px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.23,1,0.32,1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .option:hover {
+            background: linear-gradient(135deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.02) 100%);
+            border-color: rgba(0,0,0,0.15);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+            transform: translateX(4px);
+        }
+
+        .option:hover::before {
+            opacity: 1;
+        }
+
+        .option input {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+            flex-shrink: 0;
+            accent-color: #000;
+            cursor: pointer;
+        }
+
+        .option label {
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+            flex: 1;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== PRIVACY CARD ===== */
+        .privacy-card {
+            background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%);
+            border: 1.5px solid rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .privacy-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .privacy-text {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .consent-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .consent {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .consent input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            accent-color: #000;
+        }
+
+        .consent label {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.6;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* ===== BUTTONS ===== */
+        .button-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 60px;
+        }
+
+        .btn {
+            padding: 16px 48px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #000 0%, #2a2a2a 100%);
+            color: white;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+            min-width: 240px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+        }
+
+        .btn-reset {
+            background: rgba(0,0,0,0.05);
+            color: #1a1a1a;
+            border: 1.5px solid rgba(0,0,0,0.1);
+            min-width: 140px;
+        }
+
+        .btn-reset:hover {
+            background: rgba(0,0,0,0.08);
+            border-color: rgba(0,0,0,0.15);
+        }
+
+        /* ===== SUCCESS MODAL ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 28px;
+            padding: 80px 60px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 50px 150px rgba(0,0,0,0.3);
+            animation: modalSlide 0.4s cubic-bezier(0.34,1.56,0.64,1);
+        }
+
+        .modal-icon {
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(135deg, #000 0%, #2a2a2a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .modal h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .modal p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        @keyframes modalSlide {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 40px 80px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header { padding: 16px 24px; }
+            .hero { padding: 60px 24px 40px; }
+            .hero h1 { font-size: 36px; }
+            .form-container { padding: 0 24px 60px; }
+            .card { padding: 40px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .button-group { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
 </head>
 <body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-inner">
+                <div class="logo-group">
+                    <div class="logo-icon">A</div>
+                    <div class="brand-info">
+                        <h1>AirTwin</h1>
+                        <p>Aviation Intelligence</p>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
 
-<section class="hero">
-  <h1>AirTwin Survey</h1>
-  <p>Help us shape the future of aviation digital twins</p>
-  <button class="btn-start" onclick="document.querySelector('.form-container').scrollIntoView({behavior:'smooth'});">Start Survey</button>
-</section>
+        <div class="hero">
+            <div class="hero-inner">
+                <div class="logo-display">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#8B4513"/><text x="50" y="62" font-size="52" font-weight="bold" text-anchor="middle" fill="#d4af37">C</text></svg>
+                </div>
+                <h1>Aircraft Maintenance Intelligence</h1>
+                <p class="hero-subtitle">Help us understand environmental exposure's impact on engine durability and predictive maintenance</p>
+                <button class="hero-cta" onclick="document.querySelector('.form-container').scrollIntoView({behavior:'smooth'})">Start Survey</button>
+            </div>
+        </div>
 
-<div class="form-container">
-  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-  <form id="surveyForm">
-    <div class="question">
-      <h3>1. Please indicate your organisation type:</h3>
-      <div class="options">
-        <label class="option"><input type="radio" name="orgType" value="Airline" required> Airline</label>
-        <label class="option"><input type="radio" name="orgType" value="MRO provider"> MRO provider</label>
-        <label class="option"><input type="radio" name="orgType" value="Engine OEM"> Engine OEM</label>
-        <label class="option"><input type="radio" name="orgType" value="Aircraft lessor"> Aircraft lessor</label>
-        <label class="option"><input type="radio" name="orgType" value="Insurer / Regulator"> Insurer / Regulator</label>
-      </div>
+        <div class="form-container">
+            <!-- CONTACT SECTION -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Your Information</h2>
+                    <p>Let us know who you are</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="contactForm">
+                    <div class="form-grid">
+                        <div class="field-group">
+                            <label class="label">First Name <span class="required">*</span></label>
+                            <input type="text" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="field-group">
+                            <label class="label">Last Name <span class="required">*</span></label>
+                            <input type="text" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+                    <div class="form-grid full">
+                        <div class="field-group">
+                            <label class="label">Email Address <span class="required">*</span></label>
+                            <input type="email" name="email" placeholder="you@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-grid">
+                        <div class="field-group">
+                            <label class="label">Company Name <span class="required">*</span></label>
+                            <input type="text" name="company" placeholder="Your Organisation" required>
+                        </div>
+                        <div class="field-group">
+                            <label class="label">Country / Region <span class="required">*</span></label>
+                            <select name="country" required>
+                                <option value="">Select country</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Australia">Australia</option>
+                                <option value="China">China</option>
+                                <option value="Japan">Japan</option>
+                                <option value="UAE">United Arab Emirates</option>
+                                <option value="Canada">Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION A -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Section A</h2>
+                    <p>Your Background & Organisation</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="sectionA">
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">1.</span> Organisation Type</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q1" value="Airline" required><label>Airline</label></label>
+                            <label class="option"><input type="radio" name="q1" value="MRO provider"><label>MRO provider</label></label>
+                            <label class="option"><input type="radio" name="q1" value="Engine OEM"><label>Engine OEM</label></label>
+                            <label class="option"><input type="radio" name="q1" value="Aircraft lessor"><label>Aircraft lessor</label></label>
+                            <label class="option"><input type="radio" name="q1" value="Insurer / Regulator"><label>Insurer / Regulator</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">2.</span> Current Role</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q2" value="Maintenance / Engineering" required><label>Maintenance / Engineering</label></label>
+                            <label class="option"><input type="radio" name="q2" value="Operations / Fleet Management"><label>Operations / Fleet Management</label></label>
+                            <label class="option"><input type="radio" name="q2" value="Sustainability / Compliance"><label>Sustainability / Compliance</label></label>
+                            <label class="option"><input type="radio" name="q2" value="Procurement / Finance"><label>Procurement / Finance</label></label>
+                            <label class="option"><input type="radio" name="q2" value="Other"><label>Other</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">3.</span> Fleet Size</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q3" value="< 20" required><label>Less than 20 aircraft</label></label>
+                            <label class="option"><input type="radio" name="q3" value="21–100"><label>21–100 aircraft</label></label>
+                            <label class="option"><input type="radio" name="q3" value="101–300"><label>101–300 aircraft</label></label>
+                            <label class="option"><input type="radio" name="q3" value="301–1000"><label>301–1000 aircraft</label></label>
+                            <label class="option"><input type="radio" name="q3" value="> 1000"><label>Over 1000 aircraft</label></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION B -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Section B</h2>
+                    <p>Maintenance Practices & Operations</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="sectionB">
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">4.</span> Maintenance Frequency</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q4" value="Monthly" required><label>Monthly</label></label>
+                            <label class="option"><input type="radio" name="q4" value="Quarterly"><label>Quarterly</label></label>
+                            <label class="option"><input type="radio" name="q4" value="Semi-annually"><label>Semi-annually</label></label>
+                            <label class="option"><input type="radio" name="q4" value="Annually"><label>Annually</label></label>
+                            <label class="option"><input type="radio" name="q4" value="Condition monitoring"><label>Based on condition monitoring</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">5.</span> Main Causes of Unplanned Maintenance</div>
+                        <div class="options">
+                            <label class="option"><input type="checkbox" name="q5" value="Mechanical wear"><label>Mechanical wear</label></label>
+                            <label class="option"><input type="checkbox" name="q5" value="Environmental exposure"><label>Environmental exposure</label></label>
+                            <label class="option"><input type="checkbox" name="q5" value="Human error"><label>Human error</label></label>
+                            <label class="option"><input type="checkbox" name="q5" value="Supply chain"><label>Supply chain / spare parts</label></label>
+                            <label class="option"><input type="checkbox" name="q5" value="Unknown"><label>Unknown / unpredictable causes</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">6.</span> Environmental Exposure Management Tools</div>
+                        <div class="options">
+                            <label class="option"><input type="checkbox" name="q6" value="None"><label>None / reactive only</label></label>
+                            <label class="option"><input type="checkbox" name="q6" value="Manual"><label>Manual inspections or logs</label></label>
+                            <label class="option"><input type="checkbox" name="q6" value="OEM"><label>OEM-provided predictive tools</label></label>
+                            <label class="option"><input type="checkbox" name="q6" value="In-house"><label>In-house analytics</label></label>
+                            <label class="option"><input type="checkbox" name="q6" value="Third-party"><label>Third-party digital twin solutions</label></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION C -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Section C</h2>
+                    <p>Pain Points & Cost Factors</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="sectionC">
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">7.</span> Maintenance Cost Significance</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q7" value="Negligible" required><label>Negligible</label></label>
+                            <label class="option"><input type="radio" name="q7" value="Moderate"><label>Moderate</label></label>
+                            <label class="option"><input type="radio" name="q7" value="Significant"><label>Significant</label></label>
+                            <label class="option"><input type="radio" name="q7" value="Severe"><label>Severe</label></label>
+                            <label class="option"><input type="radio" name="q7" value="Critical"><label>Critical challenge</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">8.</span> Cost Uncertainty Factors</div>
+                        <div class="options">
+                            <label class="option"><input type="checkbox" name="q8" value="Degradation"><label>Engine degradation</label></label>
+                            <label class="option"><input type="checkbox" name="q8" value="Component"><label>Component failure</label></label>
+                            <label class="option"><input type="checkbox" name="q8" value="External"><label>External exposure / weather</label></label>
+                            <label class="option"><input type="checkbox" name="q8" value="Labour"><label>Labour / logistics</label></label>
+                            <label class="option"><input type="checkbox" name="q8" value="Data"><label>Data unavailability</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">9.</span> Environmental Reliability Issues</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q9" value="Never" required><label>Never</label></label>
+                            <label class="option"><input type="radio" name="q9" value="Rarely"><label>Rarely</label></label>
+                            <label class="option"><input type="radio" name="q9" value="Occasionally"><label>Occasionally</label></label>
+                            <label class="option"><input type="radio" name="q9" value="Frequently"><label>Frequently</label></label>
+                            <label class="option"><input type="radio" name="q9" value="Almost always"><label>Almost always</label></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION D -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Section D</h2>
+                    <p>Technology Adoption & Barriers</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="sectionD">
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">10.</span> Digital Twin Familiarity</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q10" value="Not familiar" required><label>Not familiar</label></label>
+                            <label class="option"><input type="radio" name="q10" value="Aware"><label>Aware but not used</label></label>
+                            <label class="option"><input type="radio" name="q10" value="Pilot"><label>Some pilot use</label></label>
+                            <label class="option"><input type="radio" name="q10" value="Active"><label>Actively using</label></label>
+                            <label class="option"><input type="radio" name="q10" value="Integrated"><label>Fully integrated into operations</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">11.</span> Adoption Barriers</div>
+                        <div class="options">
+                            <label class="option"><input type="checkbox" name="q11" value="Cost"><label>Cost</label></label>
+                            <label class="option"><input type="checkbox" name="q11" value="Data sharing"><label>Data-sharing / confidentiality</label></label>
+                            <label class="option"><input type="checkbox" name="q11" value="Legacy"><label>Integration with legacy systems</label></label>
+                            <label class="option"><input type="checkbox" name="q11" value="Staff"><label>Lack of skilled staff</label></label>
+                            <label class="option"><input type="checkbox" name="q11" value="Regulatory"><label>Regulatory uncertainty</label></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION E -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Section E</h2>
+                    <p>AirTwin Value Proposition</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="sectionE">
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">12.</span> Exposure Prediction Value</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q12" value="Not valuable" required><label>Not valuable</label></label>
+                            <label class="option"><input type="radio" name="q12" value="Slightly"><label>Slightly valuable</label></label>
+                            <label class="option"><input type="radio" name="q12" value="Moderately"><label>Moderately valuable</label></label>
+                            <label class="option"><input type="radio" name="q12" value="Valuable"><label>Valuable</label></label>
+                            <label class="option"><input type="radio" name="q12" value="Extremely"><label>Extremely valuable</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">13.</span> Unique Value vs Existing Tools</div>
+                        <div class="options">
+                            <label class="option"><input type="checkbox" name="q13" value="Accuracy"><label>Better exposure modelling accuracy</label></label>
+                            <label class="option"><input type="checkbox" name="q13" value="Integration"><label>Integration with existing dashboards</label></label>
+                            <label class="option"><input type="checkbox" name="q13" value="Cost"><label>Lower total cost</label></label>
+                            <label class="option"><input type="checkbox" name="q13" value="Visibility"><label>Independent cross-fleet visibility</label></label>
+                            <label class="option"><input type="checkbox" name="q13" value="ESG"><label>Regulatory / ESG reporting support</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">14.</span> Most Important Outcomes</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q14" value="Downtime" required><label>Reduced downtime</label></label>
+                            <label class="option"><input type="radio" name="q14" value="Predictability"><label>Improved cost predictability</label></label>
+                            <label class="option"><input type="radio" name="q14" value="Safety"><label>Enhanced safety</label></label>
+                            <label class="option"><input type="radio" name="q14" value="Compliance"><label>Sustainability compliance</label></label>
+                            <label class="option"><input type="radio" name="q14" value="Advantage"><label>Competitive advantage</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">15.</span> Partnership Endorsements</div>
+                        <div class="options">
+                            <label class="option"><input type="checkbox" name="q15" value="OEM"><label>OEM partnership</label></label>
+                            <label class="option"><input type="checkbox" name="q15" value="Regulator"><label>Regulator endorsement</label></label>
+                            <label class="option"><input type="checkbox" name="q15" value="Insurer"><label>Insurer incentive (risk-based pricing)</label></label>
+                            <label class="option"><input type="checkbox" name="q15" value="Peer"><label>Peer airline validation</label></label>
+                            <label class="option"><input type="checkbox" name="q15" value="Academic"><label>Academic / research credibility</label></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SECTION F -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Section F</h2>
+                    <p>Business & Implementation Feasibility</p>
+                    <div class="card-divider"></div>
+                </div>
+                <form id="sectionF">
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">16.</span> Commercial Model Preference</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q16" value="SaaS" required><label>Subscription (SaaS)</label></label>
+                            <label class="option"><input type="radio" name="q16" value="Per-engine"><label>Pay-per-engine</label></label>
+                            <label class="option"><input type="radio" name="q16" value="Bundled"><label>Bundled with OEM services</label></label>
+                            <label class="option"><input type="radio" name="q16" value="Licence"><label>One-off licence</label></label>
+                            <label class="option"><input type="radio" name="q16" value="Unsure"><label>Not sure yet</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">17.</span> Acceptable Payback Period</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q17" value="<6" required><label>Less than 6 months</label></label>
+                            <label class="option"><input type="radio" name="q17" value="6-12"><label>6–12 months</label></label>
+                            <label class="option"><input type="radio" name="q17" value="1-2"><label>1–2 years</label></label>
+                            <label class="option"><input type="radio" name="q17" value="2-3"><label>2–3 years</label></label>
+                            <label class="option"><input type="radio" name="q17" value=">3"><label>Over 3 years</label></label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text"><span class="question-number">18.</span> Pilot Program Scope</div>
+                        <div class="options">
+                            <label class="option"><input type="radio" name="q18" value="1-3" required><label>1–3 months, single aircraft</label></label>
+                            <label class="option"><input type="radio" name="q18" value="3-6"><label>3–6 months, small fleet</label></label>
+                            <label class="option"><input type="radio" name="q18" value="6-12"><label>6–12 months, mixed fleet</label></label>
+                            <label class="option"><input type="radio" name="q18" value="Multi"><label>Multi-partner trial (airline + OEM)</label></label>
+                            <label class="option"><input type="radio" name="q18" value="None"><label>Not interested in pilot stage</label></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- PRIVACY & CONSENT -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Privacy & Consent</h2>
+                    <p>Data Protection & Communication</p>
+                    <div class="card-divider"></div>
+                </div>
+                <div class="privacy-card">
+                    <h3>Data Protection</h3>
+                    <div class="privacy-text">
+                        <strong>Airtwin Project</strong> is committed to protecting and respecting your privacy. We'll only use your personal information to administer your account and provide requested services. From time to time, we may contact you about our products, services, and content that may be of interest to you.
+                    </div>
+                    <div class="consent-list">
+                        <div class="consent">
+                            <input type="checkbox" id="consent1" name="consent_contact" required>
+                            <label for="consent1">I agree to receive communications from Airtwin Project about products and services <span class="required">*</span></label>
+                        </div>
+                        <div class="consent">
+                            <input type="checkbox" id="consent2" name="consent_data" required>
+                            <label for="consent2">I agree to allow Airtwin Project to store and process my personal data <span class="required">*</span></label>
+                        </div>
+                    </div>
+                    <div class="privacy-text" style="margin-top: 20px; font-size: 12px;">
+                        You can unsubscribe at any time. For more information, review our <a href="#" style="color: #000; font-weight: 600;">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBMIT SECTION -->
+            <div class="button-group">
+                <button type="submit" class="btn btn-submit" id="submitBtn">Submit Survey</button>
+                <button type="reset" class="btn btn-reset" onclick="resetAllForms()">Clear All</button>
+            </div>
+        </div>
+
+        <!-- SUCCESS MODAL -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <div class="modal-icon">✓</div>
+                <h2>Thank You!</h2>
+                <p>Your survey response has been successfully recorded. We'll review your insights and be in touch soon.</p>
+                <button class="btn btn-submit" onclick="location.reload()" style="margin-top: 20px;">Close</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 Airtwin Project in partnership with Cambridge Judge Business School — All rights reserved
+        </div>
     </div>
 
-    <div class="question">
-      <h3>2. What is your current role or function?</h3>
-      <div class="options">
-        <label class="option"><input type="radio" name="role" value="Maintenance / Engineering" required> Maintenance / Engineering</label>
-        <label class="option"><input type="radio" name="role" value="Operations / Fleet Management"> Operations / Fleet Management</label>
-        <label class="option"><input type="radio" name="role" value="Sustainability / Compliance"> Sustainability / Compliance</label>
-        <label class="option"><input type="radio" name="role" value="Procurement / Finance"> Procurement / Finance</label>
-        <label class="option"><input type="radio" name="role" value="Other"> Other</label>
-      </div>
-    </div>
+    <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const successModal = document.getElementById('successModal');
+        const progressFill = document.getElementById('progressFill');
 
-    <div class="question">
-      <h3>3. How familiar are you with Digital Twins?</h3>
-      <div class="options">
-        <label class="option"><input type="radio" name="digitalTwin" value="Not familiar" required> Not familiar</label>
-        <label class="option"><input type="radio" name="digitalTwin" value="Somewhat familiar"> Somewhat familiar</label>
-        <label class="option"><input type="radio" name="digitalTwin" value="Very familiar"> Very familiar</label>
-      </div>
-    </div>
+        // Track form progress
+        document.addEventListener('change', updateProgress);
+        document.addEventListener('input', updateProgress);
 
-    <button type="submit" class="btn-submit">Submit Survey</button>
-    <button type="reset" class="btn-reset">Reset</button>
-  </form>
-</div>
+        function updateProgress() {
+            const allInputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"], input[type="text"], input[type="email"], select');
+            const filledInputs = Array.from(allInputs).filter(input => {
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    return input.checked;
+                }
+                return input.value.trim() !== '';
+            }).length;
+            const progress = (filledInputs / allInputs.length) * 100;
+            progressFill.style.width = progress + '%';
+        }
 
-<script>
-const form = document.getElementById('surveyForm');
-const totalQuestions = form.querySelectorAll('.question').length;
-const progressFill = document.getElementById('progressFill');
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault();
 
-form.addEventListener('change', updateProgress);
-function updateProgress() {
-  const answered = form.querySelectorAll('input:checked').length;
-  const percent = Math.round((answered / totalQuestions) * 100);
-  progressFill.style.width = percent + '%';
-}
+            // Validate contact info
+            const firstName = document.querySelector('input[name="firstName"]').value;
+            const lastName = document.querySelector('input[name="lastName"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const company = document.querySelector('input[name="company"]').value;
+            const country = document.querySelector('select[name="country"]').value;
+            const consent1 = document.querySelector('input[name="consent_contact"]').checked;
+            const consent2 = document.querySelector('input[name="consent_data"]').checked;
 
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  const data = new FormData(form);
-  const params = new URLSearchParams();
-  data.forEach((value, key) => { params.append(key, value); });
+            if (!firstName || !lastName || !email || !company || !country || !consent1 || !consent2) {
+                alert('Please fill in all required fields and accept the consent checkboxes.');
+                return;
+            }
 
-  fetch("YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL", { 
-    method: 'POST', 
-    body: params 
-  })
-  .then(response => response.json())
-  .then(res => {
-    if(res.result === "success") {
-      alert("Thank you! Your response has been recorded.");
-      form.reset();
-      progressFill.style.width = '0%';
-    }
-  })
-  .catch(err => alert("Submission failed. Please try again."));
-});
-</script>
+            // Collect all responses
+            const allForms = document.querySelectorAll('form');
+            const responses = {
+                firstName, lastName, email, company, country,
+                consent_contact: consent1, consent_data: consent2,
+                timestamp: new Date().toISOString(),
+                survey: {}
+            };
 
+            // Gather survey responses
+            allForms.forEach(form => {
+                const formData = new FormData(form);
+                for (let [key, value] of formData.entries()) {
+                    if (key.startsWith('q')) {
+                        if (responses.survey[key]) {
+                            if (Array.isArray(responses.survey[key])) {
+                                responses.survey[key].push(value);
+                            } else {
+                                responses.survey[key] = [responses.survey[key], value];
+                            }
+                        } else {
+                            responses.survey[key] = value;
+                        }
+                    }
+                }
+            });
+
+            console.log('Complete Survey Submission:', responses);
+            successModal.style.display = 'flex';
+
+            // TODO: Send to backend/Google Sheets
+            // fetch('/api/submit-survey', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(responses)
+            // })
+        });
+
+        function resetAllForms() {
+            document.querySelectorAll('form').forEach(form => form.reset());
+            progressFill.style.width = '0%';
+        }
+    </script>
 </body>
 </html>
