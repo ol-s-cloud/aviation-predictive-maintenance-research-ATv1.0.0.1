@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirTwin Survey</title>
+<style>
+  /* Base styles and hero section omitted for brevity */
+  body{font-family:sans-serif;background:#f8f9fa;color:#333;margin:0;padding:0;}
+  .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#0d47a1;color:white;text-align:center;padding:0 20px;}
+  .hero h1{font-size:48px;margin-bottom:20px;}
+  .hero p{font-size:20px;margin-bottom:30px;}
+  .btn-start{background:#ffc107;color:#0d47a1;border:none;padding:15px 30px;font-size:18px;cursor:pointer;border-radius:8px;}
+  .btn-start:hover{background:#ffb300;}
+  .form-container{max-width:700px;margin:50px auto;padding:20px;background:white;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+  .progress-bar{width:100%;background:#e0e0e0;height:10px;border-radius:5px;overflow:hidden;margin-bottom:30px;}
+  .progress-fill{width:0%;height:100%;background:#0d47a1;transition:width 0.3s ease;}
+  .question{margin-bottom:25px;}
+  .question h3{font-size:20px;margin-bottom:10px;}
+  .options{display:flex;flex-direction:column;gap:10px;}
+  .option{display:flex;align-items:center;padding:10px 15px;border:1px solid #ccc;border-radius:8px;cursor:pointer;transition:0.2s;}
+  .option:hover{background:#f1f1f1;}
+  .option input{margin-right:10px;}
+  .btn-submit,.btn-reset{background:#0d47a1;color:white;border:none;padding:12px 25px;font-size:16px;cursor:pointer;border-radius:8px;margin-right:10px;}
+  .btn-submit:hover,.btn-reset:hover{background:#073c7a;}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>AirTwin Survey</h1>
+  <p>Help us shape the future of aviation digital twins</p>
+  <button class="btn-start" onclick="document.querySelector('.form-container').scrollIntoView({behavior:'smooth'});">Start Survey</button>
+</section>
+
+<div class="form-container">
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <form id="surveyForm">
+    <div class="question">
+      <h3>1. Please indicate your organisation type:</h3>
+      <div class="options">
+        <label class="option"><input type="radio" name="orgType" value="Airline" required> Airline</label>
+        <label class="option"><input type="radio" name="orgType" value="MRO provider"> MRO provider</label>
+        <label class="option"><input type="radio" name="orgType" value="Engine OEM"> Engine OEM</label>
+        <label class="option"><input type="radio" name="orgType" value="Aircraft lessor"> Aircraft lessor</label>
+        <label class="option"><input type="radio" name="orgType" value="Insurer / Regulator"> Insurer / Regulator</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2. What is your current role or function?</h3>
+      <div class="options">
+        <label class="option"><input type="radio" name="role" value="Maintenance / Engineering" required> Maintenance / Engineering</label>
+        <label class="option"><input type="radio" name="role" value="Operations / Fleet Management"> Operations / Fleet Management</label>
+        <label class="option"><input type="radio" name="role" value="Sustainability / Compliance"> Sustainability / Compliance</label>
+        <label class="option"><input type="radio" name="role" value="Procurement / Finance"> Procurement / Finance</label>
+        <label class="option"><input type="radio" name="role" value="Other"> Other</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. How familiar are you with Digital Twins?</h3>
+      <div class="options">
+        <label class="option"><input type="radio" name="digitalTwin" value="Not familiar" required> Not familiar</label>
+        <label class="option"><input type="radio" name="digitalTwin" value="Somewhat familiar"> Somewhat familiar</label>
+        <label class="option"><input type="radio" name="digitalTwin" value="Very familiar"> Very familiar</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit">Submit Survey</button>
+    <button type="reset" class="btn-reset">Reset</button>
+  </form>
+</div>
+
+<script>
+const form = document.getElementById('surveyForm');
+const totalQuestions = form.querySelectorAll('.question').length;
+const progressFill = document.getElementById('progressFill');
+
+form.addEventListener('change', updateProgress);
+function updateProgress() {
+  const answered = form.querySelectorAll('input:checked').length;
+  const percent = Math.round((answered / totalQuestions) * 100);
+  progressFill.style.width = percent + '%';
+}
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  const data = new FormData(form);
+  const params = new URLSearchParams();
+  data.forEach((value, key) => { params.append(key, value); });
+
+  fetch("YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL", { 
+    method: 'POST', 
+    body: params 
+  })
+  .then(response => response.json())
+  .then(res => {
+    if(res.result === "success") {
+      alert("Thank you! Your response has been recorded.");
+      form.reset();
+      progressFill.style.width = '0%';
+    }
+  })
+  .catch(err => alert("Submission failed. Please try again."));
+});
+</script>
+
+</body>
+</html>
